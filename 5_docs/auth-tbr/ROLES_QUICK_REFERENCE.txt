@@ -1,0 +1,129 @@
+═══════════════════════════════════════════════════════════════
+  KEYCLOAK ROLES - QUICK REFERENCE CARD
+═══════════════════════════════════════════════════════════════
+
+📍 Location: https://auth.totesoft.com/admin/
+🎯 Realm: connectme
+
+═══════════════════════════════════════════════════════════════
+PART 1: CLIENT ROLES (Clients → connectme-frontend → Roles)
+═══════════════════════════════════════════════════════════════
+
+Basic Roles (Just create these):
+─────────────────────────────────────────────────────────────
+claim:read                  | Read claims data
+claim:write                 | Create and update claims
+claim:delete                | Delete claims
+eligibility:read            | Read eligibility data
+eligibility:write           | Create and update eligibility
+user:read                   | Read user data
+user:write                  | Create and update users
+user:delete                 | Delete users
+organization:read           | Read organization data
+organization:write          | Update organization settings
+bulk:process                | Process bulk CSV uploads
+report:view                 | View reports and analytics
+report:export               | Export reports
+audit:view                  | View audit logs
+settings:manage             | Manage system settings
+
+Composite Roles (Create + Add Associated Roles):
+─────────────────────────────────────────────────────────────
+claim:admin                 | Add: claim:read, claim:write, claim:delete
+eligibility:admin           | Add: eligibility:read, eligibility:write
+user:admin                  | Add: user:read, user:write, user:delete
+organization:admin          | Add: organization:read, organization:write
+
+═══════════════════════════════════════════════════════════════
+PART 2: REALM ROLES (Realm roles)
+═══════════════════════════════════════════════════════════════
+
+admin (Composite - Add ALL client roles)
+─────────────────────────────────────────────────────────────
+claim:admin, claim:read, claim:write, claim:delete
+eligibility:admin, eligibility:read, eligibility:write
+user:admin, user:read, user:write, user:delete
+organization:admin, organization:read, organization:write
+bulk:process, report:view, report:export
+audit:view, settings:manage
+
+manager (Composite - Add these client roles)
+─────────────────────────────────────────────────────────────
+claim:read, claim:write
+eligibility:read
+user:read
+bulk:process, report:view
+
+staff (Composite - Add these client roles)
+─────────────────────────────────────────────────────────────
+claim:read
+eligibility:read
+
+billing (Composite - Add these client roles)
+─────────────────────────────────────────────────────────────
+claim:read, claim:write
+report:view
+
+═══════════════════════════════════════════════════════════════
+PART 3: TEST USER (Users → Add user)
+═══════════════════════════════════════════════════════════════
+
+Username: testuser
+Email: test@connectme.com
+First name: Test
+Last name: User
+Email verified: ON
+
+Password (Credentials tab):
+Password: testpass123
+Temporary: OFF
+
+Role (Role mapping tab):
+Assign realm role: admin
+
+═══════════════════════════════════════════════════════════════
+TEST COMMANDS
+═══════════════════════════════════════════════════════════════
+
+Get Token:
+curl -X POST https://auth.totesoft.com/realms/connectme/protocol/openid-connect/token \
+  -d "client_id=connectme-frontend" \
+  -d "username=testuser" \
+  -d "password=testpass123" \
+  -d "grant_type=password"
+
+View Roles in Token:
+TOKEN=$(curl -s -X POST https://auth.totesoft.com/realms/connectme/protocol/openid-connect/token \
+  -d "client_id=connectme-frontend" \
+  -d "username=testuser" \
+  -d "password=testpass123" \
+  -d "grant_type=password" | jq -r '.access_token')
+echo $TOKEN | cut -d'.' -f2 | base64 -d | jq
+
+═══════════════════════════════════════════════════════════════
+CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+Client Roles (19 total):
+☐ claim:read, claim:write, claim:delete, claim:admin
+☐ eligibility:read, eligibility:write, eligibility:admin
+☐ user:read, user:write, user:delete, user:admin
+☐ organization:read, organization:write, organization:admin
+☐ bulk:process, report:view, report:export
+☐ audit:view, settings:manage
+
+Realm Roles (4 total):
+☐ admin (with ALL client roles)
+☐ manager (with limited client roles)
+☐ staff (with basic client roles)
+☐ billing (with claims client roles)
+
+Test User:
+☐ testuser created
+☐ Password set
+☐ Admin role assigned
+☐ Token test successful
+
+═══════════════════════════════════════════════════════════════
+TIME: ~15-20 minutes | RESULT: Complete RBAC system! 🚀
+═══════════════════════════════════════════════════════════════

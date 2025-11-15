@@ -1,0 +1,2075 @@
+[
+  {
+    "id": "dd563a32-c399-46fd-a5bd-255fd731b8c1",
+    "claimNumber": "FE23924647",
+    "patient": "KIMBERLY KURAK",
+    "serviceDate": "07/01/2025",
+    "status": "Finalized",
+    "chargedAmount": "25.00",
+    "allowedAmount": "3.00",
+    "paidAmount": "0.00",
+    "detailsAvailable": true,
+    "queriedAt": "2025-10-15T00:22:51.993942+00:00",
+    "claimReceivedDate": "07/02/2025",
+    "lastStatusChangeDate": "07/10/2025",
+    "providerName": "RAKHI SARKAR",
+    "remarks": [],
+    "carcCodes": [],
+    "allClaimCodes": [],
+    "checkNumber": "28964878",
+    "checkAmount": "0.00",
+    "paymentDate": "07/10/2025",
+    "patientBalance": "3.00",
+    "deductible": "3.00",
+    "copay": "0.00",
+    "coinsurance": "0.00",
+    "timeline": [
+      {
+        "date": "07/01/2025",
+        "event": "Service Provided",
+        "description": "Service date: 07/01/2025 - 07/01/2025",
+        "type": "service"
+      },
+      {
+        "date": "07/02/2025",
+        "event": "Claim Received",
+        "description": "UHC received claim on 07/02/2025",
+        "type": "received"
+      },
+      {
+        "date": "07/08/2025",
+        "event": "Claim Processed",
+        "description": "Processed on 07/08/2025 at 15:16:11",
+        "type": "processed"
+      },
+      {
+        "date": "07/10/2025",
+        "event": "Status Updated",
+        "description": "Status effective date: 07/10/2025",
+        "type": "status"
+      },
+      {
+        "date": "07/10/2025",
+        "event": "Payment Issued",
+        "description": "Check #28964878 issued for $0.00",
+        "type": "payment"
+      }
+    ],
+    "transactionId": "706614bb-dd45-4975-8b18-78b7ad8f0f67-1760487771018",
+    "lineItems": [
+      {
+        "lineNbr": "1",
+        "processedDt": "07/08/2025",
+        "firstSrvcDt": "07/01/2025",
+        "lastSrvcDt": "07/01/2025",
+        "srvcCode": "36415",
+        "revenueCode": "",
+        "paidAmt": "0.00",
+        "allowdAmt": "3.00",
+        "provWrtOffAmt": "22.00",
+        "notCovAmt": "0.00",
+        "totalMemResp": "3.00",
+        "copay": "0.00",
+        "deductible": "3.00",
+        "coinsurance": "0.00",
+        "claimCodes": [
+          {
+            "type": "REMARK",
+            "code": "UG",
+            "description": "NETWORK PLAN DISCOUNT HAS BEEN APPLIED. THE MEMBER HAS NOT MET THE PLAN DEDUCTIBLE AND IS RESPONSIBLE FOR THE AMOUNT SHOWN."
+          },
+          {
+            "type": "CARC",
+            "code": "45",
+            "description": "CHARGE EXCEEDS FEE SCHEDULE/MAXIMUM ALLOWABLE OR CONTRACTED/LEGISLATED FEE ARRANGEMENT."
+          },
+          {
+            "type": "CARC",
+            "code": "1",
+            "description": "DEDUCTIBLE AMOUNT"
+          }
+        ],
+        "billedAmt": "25.00",
+        "networkStatus": "I",
+        "medicarePaidAmt": "0.00",
+        "unitCount": "1",
+        "processedTime": "15.16.11",
+        "linePmtServiceCode": "36415",
+        "procedureCd": "36415",
+        "procedureTypeCd": "HC",
+        "transactionCd": "00",
+        "causeCd": "0",
+        "ovrCd": "",
+        "providerAdjustDiscountAmount": "22.00",
+        "planCoveragePercent": "0.00",
+        "capFundType": "",
+        "icnSuffix": "01",
+        "icnVersionNumber": "1",
+        "lineLevelPlaceOfService": "11",
+        "qpaAmt": "0.00",
+        "pgoPct": "0.00",
+        "lineKey": "lrjkuol3m4nfif1760487771480",
+        "provNotCovAmt": "0.00",
+        "ptntNoCovAmt": "0.00"
+      }
+    ],
+    "payments": [
+      {
+        "paymentIssueDt": "07/10/2025",
+        "checkNbr": "28964878",
+        "checkAmt": "0.00",
+        "checkEFTIndicator": "E",
+        "chkSrsDesg": "W3",
+        "checkStatus": null,
+        "draftAmt": "0.00",
+        "draftNbr": "0081616607",
+        "cashedDt": null,
+        "payeeTypeCode": "Provider",
+        "payeeNm": "RSM MEDICAL",
+        "paymentType": "ACH",
+        "payeeAddress": {
+          "addressLine1": "5899 PRESTON RD STE 1104",
+          "city": "FRISCO",
+          "state": "TX",
+          "zip": "824091418"
+        }
+      }
+    ],
+    "hasDetailedData": true,
+    "hasPaymentData": true,
+    "memberInfo": {
+      "subscriberId": "990139951",
+      "policyNbr": "934890",
+      "ptntFn": "KIMBERLY",
+      "ptntLn": "KURAK",
+      "ptntDob": "02/06/1969"
+    },
+    "claimSummary": {
+      "receivedDt": "07/02/2025",
+      "processedDt": "07/08/2025",
+      "processedTm": "15:16:11",
+      "firstSrvcDt": "07/01/2025",
+      "lastSrvcDt": "07/01/2025",
+      "ptntAcctNbr": "5024",
+      "networkStatus": "I",
+      "claimType": "P",
+      "statusEfctDt": "07/10/2025",
+      "totalChargedAmt": "25.00",
+      "provWriteOffAmt": "22.00",
+      "ptntNoCovAmt": "0.00",
+      "provNotCovAmt": "0.00",
+      "totalAllowdAmt": "3.00",
+      "deductibleAmt": "3.00",
+      "totalCopayAmt": "0.00",
+      "totalCoinsAmt": "0.00",
+      "totalPaidAmt": "0.00",
+      "faclOrProfCd": "P",
+      "totalPtntRespAmt": "3.00",
+      "dccFln": "9352518395715",
+      "clmXWalkData": [
+        {
+          "clm507Cd": "F1",
+          "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+          "clm508Cd": "65",
+          "clm508CdDesc": "Claim/line has been paid.",
+          "clmIcnSufxCd": "01",
+          "clmDrftNbr": "0081616607"
+        }
+      ],
+      "chkInfo": [],
+      "claimCodes": []
+    },
+    "rawJson": {
+      "claimNumber": "FE23924647",
+      "claimStatus": "Finalized",
+      "detailsAvailable": "T",
+      "memberInfo": {
+        "subscriberId": "990139951",
+        "policyNbr": "934890",
+        "ptntFn": "KIMBERLY",
+        "ptntLn": "KURAK",
+        "ptntDob": "02/06/1969"
+      },
+      "provInfo": {
+        "submitted": {
+          "tin": "854203105",
+          "billProvNm": "RSM MEDICAL PLLC",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR"
+        },
+        "adjudicated": {
+          "tin": "854203105",
+          "billProvNm": "SARKAR MD/RAKHI",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR",
+          "tinPrfx": "2",
+          "tinSufx": "00002"
+        }
+      },
+      "claimSummary": {
+        "receivedDt": "07/02/2025",
+        "processedDt": "07/08/2025",
+        "processedTm": "15:16:11",
+        "firstSrvcDt": "07/01/2025",
+        "lastSrvcDt": "07/01/2025",
+        "ptntAcctNbr": "5024",
+        "networkStatus": "I",
+        "claimType": "P",
+        "statusEfctDt": "07/10/2025",
+        "totalChargedAmt": "25.00",
+        "provWriteOffAmt": "22.00",
+        "ptntNoCovAmt": "0.00",
+        "provNotCovAmt": "0.00",
+        "totalAllowdAmt": "3.00",
+        "deductibleAmt": "3.00",
+        "totalCopayAmt": "0.00",
+        "totalCoinsAmt": "0.00",
+        "totalPaidAmt": "0.00",
+        "faclOrProfCd": "P",
+        "totalPtntRespAmt": "3.00",
+        "dccFln": "9352518395715",
+        "clmXWalkData": [
+          {
+            "clm507Cd": "F1",
+            "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+            "clm508Cd": "65",
+            "clm508CdDesc": "Claim/line has been paid.",
+            "clmIcnSufxCd": "01",
+            "clmDrftNbr": "0081616607"
+          }
+        ],
+        "chkInfo": [],
+        "claimCodes": []
+      }
+    },
+    "detailsJson": {
+      "transactionId": "706614bb-dd45-4975-8b18-78b7ad8f0f67-1760487771018",
+      "invokeActions": "Y",
+      "claimsDetailInfo": [
+        {
+          "claimNumber": "FE23924647",
+          "payerId": "87726",
+          "cobInfo": {
+            "otherInsuredNm": "",
+            "cobCalculatedType": "",
+            "payerType": "",
+            "cobDesc": "",
+            "cobPolicyDesc": "",
+            "paymentType": "",
+            "adjudicatedCOBIndicator": "P"
+          },
+          "diagnosisCodes": [
+            {
+              "diagnosisCode": "E063"
+            },
+            {
+              "diagnosisCode": "E782"
+            }
+          ],
+          "claimReprocessedIndicator": "N",
+          "paymentToEnrollee": "N",
+          "capitationIndicator": false,
+          "electronicPayerID": "87726",
+          "initialDecisionDate": "07/08/2025",
+          "dateReceived": "07/02/2025",
+          "diagnosisCodeType": "0",
+          "diagnosticSequenceNumber": "1",
+          "placeOfService": "11",
+          "providerTinPrefix": "2",
+          "providerTin": "854203105",
+          "providerTinSuffix": "00002",
+          "billingProviderName": "SARKAR MD/RAKHI",
+          "renderingProviderName": "",
+          "patientName": "KIMBERLY KURAK",
+          "claimOIPaidAmount": "0.00",
+          "patientAccountNumber": "5024",
+          "patientGroupNumber": "934890",
+          "patientSubscriberNumber": "990139951",
+          "patientRelationship": "SP",
+          "cobMedCalcType": "612",
+          "typeOfClaim": "COM",
+          "lines": [
+            {
+              "lineNbr": "1",
+              "processedDt": "07/08/2025",
+              "firstSrvcDt": "07/01/2025",
+              "lastSrvcDt": "07/01/2025",
+              "srvcCode": "36415",
+              "revenueCode": "",
+              "paidAmt": "0.00",
+              "allowdAmt": "3.00",
+              "provWrtOffAmt": "22.00",
+              "notCovAmt": "0.00",
+              "totalMemResp": "3.00",
+              "copay": "0.00",
+              "deductible": "3.00",
+              "coinsurance": "0.00",
+              "claimCodes": [
+                {
+                  "type": "REMARK",
+                  "code": "UG",
+                  "description": "NETWORK PLAN DISCOUNT HAS BEEN APPLIED. THE MEMBER HAS NOT MET THE PLAN DEDUCTIBLE AND IS RESPONSIBLE FOR THE AMOUNT SHOWN."
+                },
+                {
+                  "type": "CARC",
+                  "code": "45",
+                  "description": "CHARGE EXCEEDS FEE SCHEDULE/MAXIMUM ALLOWABLE OR CONTRACTED/LEGISLATED FEE ARRANGEMENT."
+                },
+                {
+                  "type": "CARC",
+                  "code": "1",
+                  "description": "DEDUCTIBLE AMOUNT"
+                }
+              ],
+              "billedAmt": "25.00",
+              "networkStatus": "I",
+              "medicarePaidAmt": "0.00",
+              "unitCount": "1",
+              "processedTime": "15.16.11",
+              "linePmtServiceCode": "36415",
+              "procedureCd": "36415",
+              "procedureTypeCd": "HC",
+              "transactionCd": "00",
+              "causeCd": "0",
+              "ovrCd": "",
+              "providerAdjustDiscountAmount": "22.00",
+              "planCoveragePercent": "0.00",
+              "capFundType": "",
+              "icnSuffix": "01",
+              "icnVersionNumber": "1",
+              "lineLevelPlaceOfService": "11",
+              "qpaAmt": "0.00",
+              "pgoPct": "0.00",
+              "lineKey": "lrjkuol3m4nfif1760487771480",
+              "provNotCovAmt": "0.00",
+              "ptntNoCovAmt": "0.00"
+            }
+          ]
+        }
+      ],
+      "claimSummaryInfo": [
+        {
+          "claimNumber": "FE23924647",
+          "claimStatus": "Finalized",
+          "detailsAvailable": "T",
+          "memberInfo": {
+            "subscriberId": "0460551504",
+            "policyNbr": "934890",
+            "ptntFn": "KIMBERLY",
+            "ptntLn": "KURAK",
+            "ptntDob": "02/06/1969"
+          },
+          "provInfo": {
+            "submitted": {
+              "tin": "854203105",
+              "billProvNm": "RSM MEDICAL PLLC",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            },
+            "adjudicated": {
+              "tin": "854203105",
+              "billProvNm": "SARKAR MD/RAKHI",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            }
+          },
+          "claimSummary": {
+            "receivedDt": "07/02/2025",
+            "processedDt": "07/08/2025",
+            "processedTm": "15:16:11",
+            "firstSrvcDt": "07/01/2025",
+            "lastSrvcDt": "07/01/2025",
+            "ptntAcctNbr": "5024",
+            "networkStatus": "I",
+            "claimType": "P",
+            "statusEfctDt": "07/10/2025",
+            "totalChargedAmt": "25.00",
+            "provWriteOffAmt": "22.00",
+            "ptntNoCovAmt": "0.00",
+            "provNotCovAmt": "0.00",
+            "totalAllowdAmt": "3.00",
+            "deductibleAmt": "3.00",
+            "totalCopayAmt": "0.00",
+            "totalCoinsAmt": "0.00",
+            "totalPaidAmt": "0.00",
+            "totalPtntRespAmt": "3.00",
+            "clmXWalkData": [
+              {
+                "clm507Cd": "F1",
+                "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+                "clm508Cd": "65",
+                "clm508CdDesc": "Claim/line has been paid."
+              }
+            ],
+            "chkInfo": [
+              {
+                "chkSrsDesg": "W3",
+                "chkEftInd": "E",
+                "chkNbr": "28964878",
+                "chkAmt": "0.00",
+                "paymentIssueDt": "07/10/2025",
+                "draftAmt": "0.00",
+                "draftNbr": "0081616607",
+                "payeeTypeCode": "P",
+                "payeeNm": "RSM MEDICAL",
+                "payeeAddress": {
+                  "addressLine1": "5899 PRESTON RD STE 1104",
+                  "city": "FRISCO",
+                  "state": "TX",
+                  "zip": "824091418"
+                }
+              }
+            ],
+            "claimCodes": []
+          }
+        }
+      ]
+    },
+    "paymentJson": {
+      "payments": [
+        {
+          "paymentIssueDt": "07/10/2025",
+          "checkNbr": "28964878",
+          "checkAmt": "0.00",
+          "checkEFTIndicator": "E",
+          "chkSrsDesg": "W3",
+          "checkStatus": null,
+          "draftAmt": "0.00",
+          "draftNbr": "0081616607",
+          "cashedDt": null,
+          "payeeTypeCode": "Provider",
+          "payeeNm": "RSM MEDICAL",
+          "paymentType": "ACH",
+          "payeeAddress": {
+            "addressLine1": "5899 PRESTON RD STE 1104",
+            "city": "FRISCO",
+            "state": "TX",
+            "zip": "824091418"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "5b23a633-ea78-4dc5-a094-67769b797989",
+    "claimNumber": "51545088",
+    "patient": "RANDALL MOIR",
+    "serviceDate": "07/01/2025",
+    "status": "Finalized",
+    "chargedAmount": "985.00",
+    "allowedAmount": "286.31",
+    "paidAmount": "280.59",
+    "detailsAvailable": true,
+    "queriedAt": "2025-10-15T00:22:53.638723+00:00",
+    "claimReceivedDate": "07/02/2025",
+    "lastStatusChangeDate": "07/29/2025",
+    "providerName": "RAKHI SARKAR",
+    "remarks": [],
+    "carcCodes": [],
+    "allClaimCodes": [],
+    "checkNumber": "T6643190",
+    "checkAmount": "280.59",
+    "paymentDate": "07/29/2025",
+    "patientBalance": "0.00",
+    "deductible": "0.00",
+    "copay": "0.00",
+    "coinsurance": "0.00",
+    "timeline": [
+      {
+        "date": "07/01/2025",
+        "event": "Service Provided",
+        "description": "Service date: 07/01/2025 - 07/01/2025",
+        "type": "service"
+      },
+      {
+        "date": "07/02/2025",
+        "event": "Claim Received",
+        "description": "UHC received claim on 07/02/2025",
+        "type": "received"
+      },
+      {
+        "date": "07/23/2025",
+        "event": "Claim Processed",
+        "description": "Processed on 07/23/2025 at 11:46:39",
+        "type": "processed"
+      },
+      {
+        "date": "07/29/2025",
+        "event": "Status Updated",
+        "description": "Status effective date: 07/29/2025",
+        "type": "status"
+      },
+      {
+        "date": "07/29/2025",
+        "event": "Payment Issued",
+        "description": "Check #T6643190 issued for $280.59",
+        "type": "payment"
+      }
+    ],
+    "transactionId": "3e43293a-77f7-40f1-8dbd-accf30f2d587-1760487772862",
+    "lineItems": [
+      {
+        "lineNbr": "1",
+        "processedDt": "07/23/2025",
+        "firstSrvcDt": "07/01/2025",
+        "lastSrvcDt": "07/01/2025",
+        "srvcCode": "99496",
+        "revenueCode": "",
+        "paidAmt": "280.59",
+        "allowdAmt": "286.31",
+        "provWrtOffAmt": "0.00",
+        "notCovAmt": "0.00",
+        "totalMemResp": "0.00",
+        "copay": "0.00",
+        "deductible": "0.00",
+        "coinsurance": "0.00",
+        "claimCodes": [
+          {
+            "type": "REMARK",
+            "code": "0038",
+            "description": "This claim was processed based on the allowed amount. Please do not bill the member any amount that is more than their cost share."
+          },
+          {
+            "type": "CARC",
+            "code": "045",
+            "description": "CHARGE EXCEEDS FEE SCHEDULE/MAXIMUM ALLOWABLE OR CONTRACTED/LEGISLATED FEE ARRANGEMENT."
+          },
+          {
+            "type": "CARC",
+            "code": "253",
+            "description": "SEQUESTRATION - REDUCTION IN FEDERAL PAYMENT"
+          }
+        ],
+        "billedAmt": "985.00",
+        "networkStatus": "I",
+        "medicarePaidAmt": "0.00",
+        "unitCount": "1",
+        "processedTime": "11:46:39",
+        "procedureCd": "99496",
+        "procedureTypeCd": "HC",
+        "ovrCd": "",
+        "providerAdjustDiscountAmount": "0.00",
+        "planCoveragePercent": "0.00",
+        "capFundType": "",
+        "icnSuffix": "01",
+        "lineLevelPlaceOfService": "11",
+        "qpaAmt": "0.00",
+        "pgoPct": "0.00",
+        "lineKey": "lr45p01v2f9wvo1760487773240",
+        "provNotCovAmt": "698.69",
+        "ptntNoCovAmt": "0.00"
+      }
+    ],
+    "payments": [
+      {
+        "paymentIssueDt": "07/29/2025",
+        "checkNbr": "T6643190",
+        "checkAmt": "280.59",
+        "checkEFTIndicator": "E",
+        "chkSrsDesg": "806",
+        "checkStatus": null,
+        "draftAmt": "280.59",
+        "draftNbr": null,
+        "cashedDt": null,
+        "payeeTypeCode": "Provider",
+        "payeeNm": "RSM MEDICAL",
+        "paymentType": "ACH",
+        "payeeAddress": {
+          "addressLine1": "5899 PRESTON RD STE 1104",
+          "city": "FRISCO",
+          "state": "TX",
+          "zip": "750349594"
+        }
+      }
+    ],
+    "hasDetailedData": true,
+    "hasPaymentData": true,
+    "memberInfo": {
+      "subscriberId": "997068769",
+      "policyNbr": "74452",
+      "ptntFn": "RANDALL",
+      "ptntLn": "MOIR",
+      "ptntDob": "11/14/1951"
+    },
+    "claimSummary": {
+      "receivedDt": "07/02/2025",
+      "processedDt": "07/23/2025",
+      "processedTm": "11:46:39",
+      "firstSrvcDt": "07/01/2025",
+      "lastSrvcDt": "07/01/2025",
+      "ptntAcctNbr": "5017",
+      "networkStatus": "I",
+      "claimType": "P",
+      "statusEfctDt": "07/29/2025",
+      "totalChargedAmt": "985.00",
+      "provWriteOffAmt": "0.00",
+      "ptntNoCovAmt": "0.00",
+      "provNotCovAmt": "698.69",
+      "totalAllowdAmt": "286.31",
+      "deductibleAmt": "0.00",
+      "totalCopayAmt": "0.00",
+      "totalCoinsAmt": "0.00",
+      "totalPaidAmt": "280.59",
+      "faclOrProfCd": "P",
+      "totalPtntRespAmt": "0.00",
+      "dccFln": "9352518395716",
+      "clmXWalkData": [
+        {
+          "clm507Cd": "F1",
+          "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+          "clm508Cd": "104",
+          "clm508CdDesc": "Processed according to plan provisions (Plan refers to provisions that exist between the Health Plan and the Consumer or Patient)",
+          "clmIcnSufxCd": "01"
+        }
+      ],
+      "chkInfo": [],
+      "claimCodes": []
+    },
+    "rawJson": {
+      "claimNumber": "51545088",
+      "claimStatus": "Finalized",
+      "detailsAvailable": "T",
+      "memberInfo": {
+        "subscriberId": "997068769",
+        "policyNbr": "74452",
+        "ptntFn": "RANDALL",
+        "ptntLn": "MOIR",
+        "ptntDob": "11/14/1951"
+      },
+      "provInfo": {
+        "submitted": {
+          "tin": "854203105",
+          "billProvNm": "RSM MEDICAL PLLC",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR"
+        },
+        "adjudicated": {
+          "tin": "854203105",
+          "billProvNm": "RAKHI SARKAR MD",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR",
+          "tinPrfx": "2"
+        }
+      },
+      "claimSummary": {
+        "receivedDt": "07/02/2025",
+        "processedDt": "07/23/2025",
+        "processedTm": "11:46:39",
+        "firstSrvcDt": "07/01/2025",
+        "lastSrvcDt": "07/01/2025",
+        "ptntAcctNbr": "5017",
+        "networkStatus": "I",
+        "claimType": "P",
+        "statusEfctDt": "07/29/2025",
+        "totalChargedAmt": "985.00",
+        "provWriteOffAmt": "0.00",
+        "ptntNoCovAmt": "0.00",
+        "provNotCovAmt": "698.69",
+        "totalAllowdAmt": "286.31",
+        "deductibleAmt": "0.00",
+        "totalCopayAmt": "0.00",
+        "totalCoinsAmt": "0.00",
+        "totalPaidAmt": "280.59",
+        "faclOrProfCd": "P",
+        "totalPtntRespAmt": "0.00",
+        "dccFln": "9352518395716",
+        "clmXWalkData": [
+          {
+            "clm507Cd": "F1",
+            "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+            "clm508Cd": "104",
+            "clm508CdDesc": "Processed according to plan provisions (Plan refers to provisions that exist between the Health Plan and the Consumer or Patient)",
+            "clmIcnSufxCd": "01"
+          }
+        ],
+        "chkInfo": [],
+        "claimCodes": []
+      }
+    },
+    "detailsJson": {
+      "transactionId": "3e43293a-77f7-40f1-8dbd-accf30f2d587-1760487772862",
+      "invokeActions": "Y",
+      "claimsDetailInfo": [
+        {
+          "claimNumber": "51545088",
+          "payerId": "87726",
+          "cobInfo": {
+            "otherInsuredNm": "",
+            "cobCalculatedType": "",
+            "payerType": "",
+            "cobDesc": "",
+            "cobPolicyDesc": "",
+            "paymentType": "",
+            "adjudicatedCOBIndicator": "P"
+          },
+          "diagnosisCodes": [
+            {
+              "diagnosisCode": "A0839"
+            },
+            {
+              "diagnosisCode": "T360X5A"
+            },
+            {
+              "diagnosisCode": "R1312"
+            },
+            {
+              "diagnosisCode": "G5690"
+            },
+            {
+              "diagnosisCode": "R208"
+            },
+            {
+              "diagnosisCode": "R112"
+            },
+            {
+              "diagnosisCode": "K5900"
+            },
+            {
+              "diagnosisCode": "I10"
+            }
+          ],
+          "claimReprocessedIndicator": "N",
+          "paymentToEnrollee": "N",
+          "capitationIndicator": false,
+          "electronicPayerID": "87726",
+          "initialDecisionDate": "07/23/2025",
+          "dateReceived": "07/02/2025",
+          "diagnosisCodeType": "0",
+          "diagnosticSequenceNumber": "1",
+          "placeOfService": "11",
+          "providerTinPrefix": "2",
+          "providerTin": "854203105",
+          "providerTinSuffix": "",
+          "billingProviderName": "RAKHI SARKAR MD",
+          "renderingProviderName": "RAKHI SARKAR MD",
+          "patientName": "RANDALL MOIR",
+          "claimOIPaidAmount": "0.00",
+          "patientAccountNumber": "5017",
+          "patientGroupNumber": "74452",
+          "patientSubscriberNumber": "997068769",
+          "patientRelationship": "21",
+          "cobMedCalcType": "0",
+          "typeOfClaim": "MCR",
+          "lines": [
+            {
+              "lineNbr": "1",
+              "processedDt": "07/23/2025",
+              "firstSrvcDt": "07/01/2025",
+              "lastSrvcDt": "07/01/2025",
+              "srvcCode": "99496",
+              "revenueCode": "",
+              "paidAmt": "280.59",
+              "allowdAmt": "286.31",
+              "provWrtOffAmt": "0.00",
+              "notCovAmt": "0.00",
+              "totalMemResp": "0.00",
+              "copay": "0.00",
+              "deductible": "0.00",
+              "coinsurance": "0.00",
+              "claimCodes": [
+                {
+                  "type": "REMARK",
+                  "code": "0038",
+                  "description": "This claim was processed based on the allowed amount. Please do not bill the member any amount that is more than their cost share."
+                },
+                {
+                  "type": "CARC",
+                  "code": "045",
+                  "description": "CHARGE EXCEEDS FEE SCHEDULE/MAXIMUM ALLOWABLE OR CONTRACTED/LEGISLATED FEE ARRANGEMENT."
+                },
+                {
+                  "type": "CARC",
+                  "code": "253",
+                  "description": "SEQUESTRATION - REDUCTION IN FEDERAL PAYMENT"
+                }
+              ],
+              "billedAmt": "985.00",
+              "networkStatus": "I",
+              "medicarePaidAmt": "0.00",
+              "unitCount": "1",
+              "processedTime": "11:46:39",
+              "procedureCd": "99496",
+              "procedureTypeCd": "HC",
+              "ovrCd": "",
+              "providerAdjustDiscountAmount": "0.00",
+              "planCoveragePercent": "0.00",
+              "capFundType": "",
+              "icnSuffix": "01",
+              "lineLevelPlaceOfService": "11",
+              "qpaAmt": "0.00",
+              "pgoPct": "0.00",
+              "lineKey": "lr45p01v2f9wvo1760487773240",
+              "provNotCovAmt": "698.69",
+              "ptntNoCovAmt": "0.00"
+            }
+          ]
+        }
+      ],
+      "claimSummaryInfo": [
+        {
+          "claimNumber": "51545088",
+          "claimStatus": "Finalized",
+          "detailsAvailable": "T",
+          "memberInfo": {
+            "subscriberId": "0997068769",
+            "policyNbr": "74452",
+            "ptntFn": "RANDALL",
+            "ptntLn": "MOIR",
+            "ptntDob": "11/14/1951"
+          },
+          "provInfo": {
+            "submitted": {
+              "tin": "854203105",
+              "billProvNm": "RSM MEDICAL PLLC",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            },
+            "adjudicated": {
+              "tin": "854203105",
+              "billProvNm": "RAKHI SARKAR MD",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            }
+          },
+          "claimSummary": {
+            "receivedDt": "07/02/2025",
+            "processedDt": "07/23/2025",
+            "processedTm": "11:46:39",
+            "firstSrvcDt": "07/01/2025",
+            "lastSrvcDt": "07/01/2025",
+            "ptntAcctNbr": "5017",
+            "networkStatus": "I",
+            "claimType": "P",
+            "statusEfctDt": "07/29/2025",
+            "totalChargedAmt": "985.00",
+            "provWriteOffAmt": "0.00",
+            "ptntNoCovAmt": "0.00",
+            "provNotCovAmt": "698.69",
+            "totalAllowdAmt": "286.31",
+            "deductibleAmt": "0.00",
+            "totalCopayAmt": "0.00",
+            "totalCoinsAmt": "0.00",
+            "totalPaidAmt": "280.59",
+            "totalPtntRespAmt": "0.00",
+            "clmXWalkData": [
+              {
+                "clm507Cd": "F1",
+                "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+                "clm508Cd": "104",
+                "clm508CdDesc": "Processed according to plan provisions (Plan refers to provisions that exist between the Health Plan and the Consumer or Patient)"
+              }
+            ],
+            "chkInfo": [
+              {
+                "chkSrsDesg": "806",
+                "chkEftInd": "E",
+                "chkNbr": "T6643190",
+                "chkAmt": "280.59",
+                "paymentIssueDt": "07/29/2025",
+                "draftAmt": "280.59",
+                "payeeTypeCode": "P",
+                "payeeNm": "RSM MEDICAL",
+                "payeeAddress": {
+                  "addressLine1": "5899 PRESTON RD STE 1104",
+                  "city": "FRISCO",
+                  "state": "TX",
+                  "zip": "750349594"
+                }
+              }
+            ],
+            "claimCodes": []
+          }
+        }
+      ]
+    },
+    "paymentJson": {
+      "payments": [
+        {
+          "paymentIssueDt": "07/29/2025",
+          "checkNbr": "T6643190",
+          "checkAmt": "280.59",
+          "checkEFTIndicator": "E",
+          "chkSrsDesg": "806",
+          "checkStatus": null,
+          "draftAmt": "280.59",
+          "draftNbr": null,
+          "cashedDt": null,
+          "payeeTypeCode": "Provider",
+          "payeeNm": "RSM MEDICAL",
+          "paymentType": "ACH",
+          "payeeAddress": {
+            "addressLine1": "5899 PRESTON RD STE 1104",
+            "city": "FRISCO",
+            "state": "TX",
+            "zip": "750349594"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "58cc6295-084b-49cc-ba86-7d0393140385",
+    "claimNumber": "51598988",
+    "patient": "TOMMY HOWELL",
+    "serviceDate": "07/03/2025",
+    "status": "Misdirected",
+    "chargedAmount": "455.00",
+    "allowedAmount": "0.00",
+    "paidAmount": "0.00",
+    "detailsAvailable": false,
+    "queriedAt": "2025-10-15T00:22:54.241261+00:00",
+    "claimReceivedDate": "07/04/2025",
+    "lastStatusChangeDate": "07/31/2025",
+    "providerName": "RAKHI SARKAR",
+    "remarks": [
+      {
+        "code": "1764",
+        "description": "This Line or Claim has been transferred to the proper payer.  Any inquiries or reconsideration requests should be directed to the correct payer",
+        "type": "REMARK"
+      }
+    ],
+    "carcCodes": [],
+    "allClaimCodes": [
+      {
+        "code": "1764",
+        "description": "This Line or Claim has been transferred to the proper payer.  Any inquiries or reconsideration requests should be directed to the correct payer",
+        "type": "REMARK"
+      }
+    ],
+    "checkNumber": null,
+    "checkAmount": null,
+    "paymentDate": null,
+    "patientBalance": "0.00",
+    "deductible": "0.00",
+    "copay": "0.00",
+    "coinsurance": "0.00",
+    "timeline": [
+      {
+        "date": "07/03/2025",
+        "event": "Service Provided",
+        "description": "Service date: 07/03/2025 - 07/03/2025",
+        "type": "service"
+      },
+      {
+        "date": "07/04/2025",
+        "event": "Claim Received",
+        "description": "UHC received claim on 07/04/2025",
+        "type": "received"
+      },
+      {
+        "date": "07/25/2025",
+        "event": "Claim Processed",
+        "description": "Processed on 07/25/2025 at 13:09:43",
+        "type": "processed"
+      },
+      {
+        "date": "07/31/2025",
+        "event": "Status Updated",
+        "description": "Status effective date: 07/31/2025",
+        "type": "status"
+      }
+    ],
+    "transactionId": null,
+    "lineItems": [],
+    "payments": [],
+    "hasDetailedData": true,
+    "hasPaymentData": false,
+    "memberInfo": {
+      "subscriberId": "993889760-00",
+      "policyNbr": "90769",
+      "ptntFn": "TOMMY",
+      "ptntLn": "HOWELL",
+      "ptntDob": "08/23/1959"
+    },
+    "claimSummary": {
+      "receivedDt": "07/04/2025",
+      "processedDt": "07/25/2025",
+      "processedTm": "13:09:43",
+      "firstSrvcDt": "07/03/2025",
+      "lastSrvcDt": "07/03/2025",
+      "ptntAcctNbr": "5048",
+      "networkStatus": "I",
+      "claimType": "P",
+      "statusEfctDt": "07/31/2025",
+      "totalChargedAmt": "455.00",
+      "provWriteOffAmt": "0.00",
+      "ptntNoCovAmt": "0.00",
+      "provNotCovAmt": "455.00",
+      "totalAllowdAmt": "0.00",
+      "deductibleAmt": "0.00",
+      "totalCopayAmt": "0.00",
+      "totalCoinsAmt": "0.00",
+      "totalPaidAmt": "0.00",
+      "faclOrProfCd": "P",
+      "totalPtntRespAmt": "0.00",
+      "dccFln": "9262518598286",
+      "clmXWalkData": [
+        {
+          "clm507Cd": "A0",
+          "clm507CdDesc": "Acknowledgement/Forwarded-The claim/encounter has been forwarded to another entity.",
+          "clm508Cd": "16",
+          "clm508CdDesc": "Claim/encounter has been forwarded to entity.",
+          "clmIcnSufxCd": "01"
+        }
+      ],
+      "chkInfo": [],
+      "claimCodes": [
+        {
+          "type": "REMARK",
+          "code": "1764",
+          "description": "This Line or Claim has been transferred to the proper payer.  Any inquiries or reconsideration requests should be directed to the correct payer"
+        }
+      ]
+    },
+    "rawJson": {
+      "claimNumber": "51598988",
+      "claimStatus": "Misdirected",
+      "detailsAvailable": "F",
+      "memberInfo": {
+        "subscriberId": "993889760-00",
+        "policyNbr": "90769",
+        "ptntFn": "TOMMY",
+        "ptntLn": "HOWELL",
+        "ptntDob": "08/23/1959"
+      },
+      "provInfo": {
+        "submitted": {
+          "tin": "854203105",
+          "billProvNm": "RSM MEDICAL PLLC",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR"
+        },
+        "adjudicated": {
+          "tin": "854203105",
+          "billProvNm": "RAKHI SARKAR MD",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR",
+          "tinPrfx": "2"
+        }
+      },
+      "claimSummary": {
+        "receivedDt": "07/04/2025",
+        "processedDt": "07/25/2025",
+        "processedTm": "13:09:43",
+        "firstSrvcDt": "07/03/2025",
+        "lastSrvcDt": "07/03/2025",
+        "ptntAcctNbr": "5048",
+        "networkStatus": "I",
+        "claimType": "P",
+        "statusEfctDt": "07/31/2025",
+        "totalChargedAmt": "455.00",
+        "provWriteOffAmt": "0.00",
+        "ptntNoCovAmt": "0.00",
+        "provNotCovAmt": "455.00",
+        "totalAllowdAmt": "0.00",
+        "deductibleAmt": "0.00",
+        "totalCopayAmt": "0.00",
+        "totalCoinsAmt": "0.00",
+        "totalPaidAmt": "0.00",
+        "faclOrProfCd": "P",
+        "totalPtntRespAmt": "0.00",
+        "dccFln": "9262518598286",
+        "clmXWalkData": [
+          {
+            "clm507Cd": "A0",
+            "clm507CdDesc": "Acknowledgement/Forwarded-The claim/encounter has been forwarded to another entity.",
+            "clm508Cd": "16",
+            "clm508CdDesc": "Claim/encounter has been forwarded to entity.",
+            "clmIcnSufxCd": "01"
+          }
+        ],
+        "chkInfo": [],
+        "claimCodes": [
+          {
+            "type": "REMARK",
+            "code": "1764",
+            "description": "This Line or Claim has been transferred to the proper payer.  Any inquiries or reconsideration requests should be directed to the correct payer"
+          }
+        ]
+      }
+    },
+    "detailsJson": {
+      "claimSummaryInfo": [
+        {
+          "claimNumber": "51598988",
+          "claimStatus": "Misdirected",
+          "detailsAvailable": "F",
+          "memberInfo": {
+            "subscriberId": "0993889760",
+            "policyNbr": "90769",
+            "ptntFn": "TOMMY",
+            "ptntLn": "HOWELL",
+            "ptntDob": "08/23/1959"
+          },
+          "provInfo": {
+            "submitted": {
+              "tin": "854203105",
+              "billProvNm": "RSM MEDICAL PLLC",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            },
+            "adjudicated": {
+              "tin": "854203105",
+              "billProvNm": "RAKHI SARKAR MD",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            }
+          },
+          "claimSummary": {
+            "receivedDt": "07/04/2025",
+            "processedDt": "07/25/2025",
+            "processedTm": "13:09:43",
+            "firstSrvcDt": "07/03/2025",
+            "lastSrvcDt": "07/03/2025",
+            "ptntAcctNbr": "5048",
+            "networkStatus": "I",
+            "claimType": "P",
+            "statusEfctDt": "07/31/2025",
+            "totalChargedAmt": "455.00",
+            "provWriteOffAmt": "0.00",
+            "ptntNoCovAmt": "0.00",
+            "provNotCovAmt": "455.00",
+            "totalAllowdAmt": "0.00",
+            "deductibleAmt": "0.00",
+            "totalCopayAmt": "0.00",
+            "totalCoinsAmt": "0.00",
+            "totalPaidAmt": "0.00",
+            "totalPtntRespAmt": "0.00",
+            "clmXWalkData": [
+              {
+                "clm507Cd": "A0",
+                "clm507CdDesc": "Acknowledgement/Forwarded-The claim/encounter has been forwarded to another entity.",
+                "clm508Cd": "16",
+                "clm508CdDesc": "Claim/encounter has been forwarded to entity."
+              }
+            ],
+            "chkInfo": [
+              {
+                "chkSrsDesg": "806",
+                "chkEftInd": "E",
+                "chkNbr": "T6805769",
+                "chkAmt": "128.82",
+                "paymentIssueDt": "07/31/2025",
+                "draftAmt": "0.00",
+                "payeeTypeCode": "P",
+                "payeeNm": "RSM MEDICAL",
+                "payeeAddress": {
+                  "addressLine1": "5899 PRESTON RD STE 1104",
+                  "city": "FRISCO",
+                  "state": "TX",
+                  "zip": "750349594"
+                }
+              }
+            ],
+            "claimCodes": [
+              {
+                "type": "REMARK",
+                "code": "1764",
+                "description": "This Line or Claim has been transferred to the proper payer.  Any inquiries or reconsideration requests should be directed to the correct payer"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "paymentJson": null
+  },
+  {
+    "id": "272a3fb7-c281-491b-b694-e5f2c3fe1585",
+    "claimNumber": "51611599",
+    "patient": "MOSTAFA KORDI",
+    "serviceDate": "07/03/2025",
+    "status": "Finalized",
+    "chargedAmount": "455.00",
+    "allowedAmount": "131.44",
+    "paidAmount": "128.82",
+    "detailsAvailable": true,
+    "queriedAt": "2025-10-15T00:22:55.829321+00:00",
+    "claimReceivedDate": "07/05/2025",
+    "lastStatusChangeDate": "07/31/2025",
+    "providerName": "RAKHI SARKAR",
+    "remarks": [],
+    "carcCodes": [],
+    "allClaimCodes": [],
+    "checkNumber": "T6805769",
+    "checkAmount": "128.82",
+    "paymentDate": "07/31/2025",
+    "patientBalance": "0.00",
+    "deductible": "0.00",
+    "copay": "0.00",
+    "coinsurance": "0.00",
+    "timeline": [
+      {
+        "date": "07/03/2025",
+        "event": "Service Provided",
+        "description": "Service date: 07/03/2025 - 07/03/2025",
+        "type": "service"
+      },
+      {
+        "date": "07/05/2025",
+        "event": "Claim Received",
+        "description": "UHC received claim on 07/05/2025",
+        "type": "received"
+      },
+      {
+        "date": "07/25/2025",
+        "event": "Claim Processed",
+        "description": "Processed on 07/25/2025 at 13:10:14",
+        "type": "processed"
+      },
+      {
+        "date": "07/31/2025",
+        "event": "Status Updated",
+        "description": "Status effective date: 07/31/2025",
+        "type": "status"
+      },
+      {
+        "date": "07/31/2025",
+        "event": "Payment Issued",
+        "description": "Check #T6805769 issued for $128.82",
+        "type": "payment"
+      }
+    ],
+    "transactionId": "faf33f3d-5ecb-4b3c-9570-bb4b180dba15-1760487775100",
+    "lineItems": [
+      {
+        "lineNbr": "1",
+        "processedDt": "07/25/2025",
+        "firstSrvcDt": "07/03/2025",
+        "lastSrvcDt": "07/03/2025",
+        "srvcCode": "99214",
+        "revenueCode": "",
+        "paidAmt": "128.82",
+        "allowdAmt": "131.44",
+        "provWrtOffAmt": "0.00",
+        "notCovAmt": "0.00",
+        "totalMemResp": "0.00",
+        "copay": "0.00",
+        "deductible": "0.00",
+        "coinsurance": "0.00",
+        "claimCodes": [
+          {
+            "type": "REMARK",
+            "code": "0038",
+            "description": "This claim was processed based on the allowed amount. Please do not bill the member any amount that is more than their cost share."
+          },
+          {
+            "type": "CARC",
+            "code": "045",
+            "description": "CHARGE EXCEEDS FEE SCHEDULE/MAXIMUM ALLOWABLE OR CONTRACTED/LEGISLATED FEE ARRANGEMENT."
+          },
+          {
+            "type": "CARC",
+            "code": "253",
+            "description": "SEQUESTRATION - REDUCTION IN FEDERAL PAYMENT"
+          }
+        ],
+        "billedAmt": "455.00",
+        "networkStatus": "I",
+        "medicarePaidAmt": "0.00",
+        "unitCount": "1",
+        "processedTime": "13:10:14",
+        "procedureCd": "99214",
+        "procedureTypeCd": "HC",
+        "ovrCd": "",
+        "providerAdjustDiscountAmount": "0.00",
+        "planCoveragePercent": "0.00",
+        "capFundType": "",
+        "icnSuffix": "01",
+        "lineLevelPlaceOfService": "11",
+        "qpaAmt": "0.00",
+        "pgoPct": "0.00",
+        "lineKey": "lrmnbxtn1d2fhc1760487775458",
+        "provNotCovAmt": "323.56",
+        "ptntNoCovAmt": "0.00"
+      }
+    ],
+    "payments": [
+      {
+        "paymentIssueDt": "07/31/2025",
+        "checkNbr": "T6805769",
+        "checkAmt": "128.82",
+        "checkEFTIndicator": "E",
+        "chkSrsDesg": "806",
+        "checkStatus": null,
+        "draftAmt": "128.82",
+        "draftNbr": null,
+        "cashedDt": null,
+        "payeeTypeCode": "Provider",
+        "payeeNm": "RSM MEDICAL",
+        "paymentType": "ACH",
+        "payeeAddress": {
+          "addressLine1": "5899 PRESTON RD STE 1104",
+          "city": "FRISCO",
+          "state": "TX",
+          "zip": "750349594"
+        }
+      }
+    ],
+    "hasDetailedData": true,
+    "hasPaymentData": true,
+    "memberInfo": {
+      "subscriberId": "939557438-00",
+      "policyNbr": "74452",
+      "ptntFn": "MOSTAFA",
+      "ptntLn": "KORDI",
+      "ptntDob": "04/07/1960"
+    },
+    "claimSummary": {
+      "receivedDt": "07/05/2025",
+      "processedDt": "07/25/2025",
+      "processedTm": "13:10:14",
+      "firstSrvcDt": "07/03/2025",
+      "lastSrvcDt": "07/03/2025",
+      "ptntAcctNbr": "5055",
+      "networkStatus": "I",
+      "claimType": "P",
+      "statusEfctDt": "07/31/2025",
+      "totalChargedAmt": "455.00",
+      "provWriteOffAmt": "0.00",
+      "ptntNoCovAmt": "0.00",
+      "provNotCovAmt": "323.56",
+      "totalAllowdAmt": "131.44",
+      "deductibleAmt": "0.00",
+      "totalCopayAmt": "0.00",
+      "totalCoinsAmt": "0.00",
+      "totalPaidAmt": "128.82",
+      "faclOrProfCd": "P",
+      "totalPtntRespAmt": "0.00",
+      "dccFln": "9182518646782",
+      "clmXWalkData": [
+        {
+          "clm507Cd": "F1",
+          "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+          "clm508Cd": "104",
+          "clm508CdDesc": "Processed according to plan provisions (Plan refers to provisions that exist between the Health Plan and the Consumer or Patient)",
+          "clmIcnSufxCd": "01"
+        }
+      ],
+      "chkInfo": [],
+      "claimCodes": []
+    },
+    "rawJson": {
+      "claimNumber": "51611599",
+      "claimStatus": "Finalized",
+      "detailsAvailable": "T",
+      "memberInfo": {
+        "subscriberId": "939557438-00",
+        "policyNbr": "74452",
+        "ptntFn": "MOSTAFA",
+        "ptntLn": "KORDI",
+        "ptntDob": "04/07/1960"
+      },
+      "provInfo": {
+        "submitted": {
+          "tin": "854203105",
+          "billProvNm": "RSM MEDICAL PLLC",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR"
+        },
+        "adjudicated": {
+          "tin": "854203105",
+          "billProvNm": "RAKHI SARKAR MD",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR",
+          "tinPrfx": "2"
+        }
+      },
+      "claimSummary": {
+        "receivedDt": "07/05/2025",
+        "processedDt": "07/25/2025",
+        "processedTm": "13:10:14",
+        "firstSrvcDt": "07/03/2025",
+        "lastSrvcDt": "07/03/2025",
+        "ptntAcctNbr": "5055",
+        "networkStatus": "I",
+        "claimType": "P",
+        "statusEfctDt": "07/31/2025",
+        "totalChargedAmt": "455.00",
+        "provWriteOffAmt": "0.00",
+        "ptntNoCovAmt": "0.00",
+        "provNotCovAmt": "323.56",
+        "totalAllowdAmt": "131.44",
+        "deductibleAmt": "0.00",
+        "totalCopayAmt": "0.00",
+        "totalCoinsAmt": "0.00",
+        "totalPaidAmt": "128.82",
+        "faclOrProfCd": "P",
+        "totalPtntRespAmt": "0.00",
+        "dccFln": "9182518646782",
+        "clmXWalkData": [
+          {
+            "clm507Cd": "F1",
+            "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+            "clm508Cd": "104",
+            "clm508CdDesc": "Processed according to plan provisions (Plan refers to provisions that exist between the Health Plan and the Consumer or Patient)",
+            "clmIcnSufxCd": "01"
+          }
+        ],
+        "chkInfo": [],
+        "claimCodes": []
+      }
+    },
+    "detailsJson": {
+      "transactionId": "faf33f3d-5ecb-4b3c-9570-bb4b180dba15-1760487775100",
+      "invokeActions": "Y",
+      "claimsDetailInfo": [
+        {
+          "claimNumber": "51611599",
+          "payerId": "87726",
+          "cobInfo": {
+            "otherInsuredNm": "",
+            "cobCalculatedType": "",
+            "payerType": "",
+            "cobDesc": "",
+            "cobPolicyDesc": "",
+            "paymentType": "",
+            "adjudicatedCOBIndicator": "P"
+          },
+          "diagnosisCodes": [
+            {
+              "diagnosisCode": "L247"
+            },
+            {
+              "diagnosisCode": "R21"
+            },
+            {
+              "diagnosisCode": "Z955"
+            },
+            {
+              "diagnosisCode": "I2510"
+            }
+          ],
+          "claimReprocessedIndicator": "N",
+          "paymentToEnrollee": "N",
+          "capitationIndicator": false,
+          "electronicPayerID": "87726",
+          "initialDecisionDate": "07/25/2025",
+          "dateReceived": "07/05/2025",
+          "diagnosisCodeType": "0",
+          "diagnosticSequenceNumber": "1",
+          "placeOfService": "11",
+          "providerTinPrefix": "2",
+          "providerTin": "854203105",
+          "providerTinSuffix": "",
+          "billingProviderName": "RAKHI SARKAR MD",
+          "renderingProviderName": "RAKHI SARKAR MD",
+          "patientName": "MOSTAFA KORDI",
+          "claimOIPaidAmount": "0.00",
+          "patientAccountNumber": "5055",
+          "patientGroupNumber": "74452",
+          "patientSubscriberNumber": "939557438-00",
+          "patientRelationship": "21",
+          "cobMedCalcType": "0",
+          "typeOfClaim": "MCR",
+          "lines": [
+            {
+              "lineNbr": "1",
+              "processedDt": "07/25/2025",
+              "firstSrvcDt": "07/03/2025",
+              "lastSrvcDt": "07/03/2025",
+              "srvcCode": "99214",
+              "revenueCode": "",
+              "paidAmt": "128.82",
+              "allowdAmt": "131.44",
+              "provWrtOffAmt": "0.00",
+              "notCovAmt": "0.00",
+              "totalMemResp": "0.00",
+              "copay": "0.00",
+              "deductible": "0.00",
+              "coinsurance": "0.00",
+              "claimCodes": [
+                {
+                  "type": "REMARK",
+                  "code": "0038",
+                  "description": "This claim was processed based on the allowed amount. Please do not bill the member any amount that is more than their cost share."
+                },
+                {
+                  "type": "CARC",
+                  "code": "045",
+                  "description": "CHARGE EXCEEDS FEE SCHEDULE/MAXIMUM ALLOWABLE OR CONTRACTED/LEGISLATED FEE ARRANGEMENT."
+                },
+                {
+                  "type": "CARC",
+                  "code": "253",
+                  "description": "SEQUESTRATION - REDUCTION IN FEDERAL PAYMENT"
+                }
+              ],
+              "billedAmt": "455.00",
+              "networkStatus": "I",
+              "medicarePaidAmt": "0.00",
+              "unitCount": "1",
+              "processedTime": "13:10:14",
+              "procedureCd": "99214",
+              "procedureTypeCd": "HC",
+              "ovrCd": "",
+              "providerAdjustDiscountAmount": "0.00",
+              "planCoveragePercent": "0.00",
+              "capFundType": "",
+              "icnSuffix": "01",
+              "lineLevelPlaceOfService": "11",
+              "qpaAmt": "0.00",
+              "pgoPct": "0.00",
+              "lineKey": "lrmnbxtn1d2fhc1760487775458",
+              "provNotCovAmt": "323.56",
+              "ptntNoCovAmt": "0.00"
+            }
+          ]
+        }
+      ],
+      "claimSummaryInfo": [
+        {
+          "claimNumber": "51611599",
+          "claimStatus": "Finalized",
+          "detailsAvailable": "T",
+          "memberInfo": {
+            "subscriberId": "0939557438",
+            "policyNbr": "74452",
+            "ptntFn": "MOSTAFA",
+            "ptntLn": "KORDI",
+            "ptntDob": "04/07/1960"
+          },
+          "provInfo": {
+            "submitted": {
+              "tin": "854203105",
+              "billProvNm": "RSM MEDICAL PLLC",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            },
+            "adjudicated": {
+              "tin": "854203105",
+              "billProvNm": "RAKHI SARKAR MD",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            }
+          },
+          "claimSummary": {
+            "receivedDt": "07/05/2025",
+            "processedDt": "07/25/2025",
+            "processedTm": "13:10:14",
+            "firstSrvcDt": "07/03/2025",
+            "lastSrvcDt": "07/03/2025",
+            "ptntAcctNbr": "5055",
+            "networkStatus": "I",
+            "claimType": "P",
+            "statusEfctDt": "07/31/2025",
+            "totalChargedAmt": "455.00",
+            "provWriteOffAmt": "0.00",
+            "ptntNoCovAmt": "0.00",
+            "provNotCovAmt": "323.56",
+            "totalAllowdAmt": "131.44",
+            "deductibleAmt": "0.00",
+            "totalCopayAmt": "0.00",
+            "totalCoinsAmt": "0.00",
+            "totalPaidAmt": "128.82",
+            "totalPtntRespAmt": "0.00",
+            "clmXWalkData": [
+              {
+                "clm507Cd": "F1",
+                "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+                "clm508Cd": "104",
+                "clm508CdDesc": "Processed according to plan provisions (Plan refers to provisions that exist between the Health Plan and the Consumer or Patient)"
+              }
+            ],
+            "chkInfo": [
+              {
+                "chkSrsDesg": "806",
+                "chkEftInd": "E",
+                "chkNbr": "T6805769",
+                "chkAmt": "128.82",
+                "paymentIssueDt": "07/31/2025",
+                "draftAmt": "128.82",
+                "payeeTypeCode": "P",
+                "payeeNm": "RSM MEDICAL",
+                "payeeAddress": {
+                  "addressLine1": "5899 PRESTON RD STE 1104",
+                  "city": "FRISCO",
+                  "state": "TX",
+                  "zip": "750349594"
+                }
+              }
+            ],
+            "claimCodes": []
+          }
+        }
+      ]
+    },
+    "paymentJson": {
+      "payments": [
+        {
+          "paymentIssueDt": "07/31/2025",
+          "checkNbr": "T6805769",
+          "checkAmt": "128.82",
+          "checkEFTIndicator": "E",
+          "chkSrsDesg": "806",
+          "checkStatus": null,
+          "draftAmt": "128.82",
+          "draftNbr": null,
+          "cashedDt": null,
+          "payeeTypeCode": "Provider",
+          "payeeNm": "RSM MEDICAL",
+          "paymentType": "ACH",
+          "payeeAddress": {
+            "addressLine1": "5899 PRESTON RD STE 1104",
+            "city": "FRISCO",
+            "state": "TX",
+            "zip": "750349594"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "9016e595-63ea-4409-a927-dc6b22cca3d9",
+    "claimNumber": "FE98163821",
+    "patient": "ZOEY WILCOX",
+    "serviceDate": "07/02/2025",
+    "status": "Finalized",
+    "chargedAmount": "455.00",
+    "allowedAmount": "220.63",
+    "paidAmount": "200.63",
+    "detailsAvailable": true,
+    "queriedAt": "2025-10-15T00:22:57.527471+00:00",
+    "claimReceivedDate": "07/24/2025",
+    "lastStatusChangeDate": "07/31/2025",
+    "providerName": "RAKHI SARKAR",
+    "remarks": [],
+    "carcCodes": [],
+    "allClaimCodes": [],
+    "checkNumber": "31064834",
+    "checkAmount": "1133.85",
+    "paymentDate": "07/31/2025",
+    "patientBalance": "20.00",
+    "deductible": "0.00",
+    "copay": "20.00",
+    "coinsurance": "0.00",
+    "timeline": [
+      {
+        "date": "07/02/2025",
+        "event": "Service Provided",
+        "description": "Service date: 07/02/2025 - 07/02/2025",
+        "type": "service"
+      },
+      {
+        "date": "07/24/2025",
+        "event": "Claim Received",
+        "description": "UHC received claim on 07/24/2025",
+        "type": "received"
+      },
+      {
+        "date": "07/25/2025",
+        "event": "Claim Processed",
+        "description": "Processed on 07/25/2025 at 20:06:13",
+        "type": "processed"
+      },
+      {
+        "date": "07/31/2025",
+        "event": "Status Updated",
+        "description": "Status effective date: 07/31/2025",
+        "type": "status"
+      },
+      {
+        "date": "07/31/2025",
+        "event": "Payment Issued",
+        "description": "Check #31064834 issued for $1133.85",
+        "type": "payment"
+      }
+    ],
+    "transactionId": "8e8b8158-6f91-4e75-915a-7ebf311ea253-1760487776837",
+    "lineItems": [
+      {
+        "lineNbr": "1",
+        "processedDt": "07/25/2025",
+        "firstSrvcDt": "07/02/2025",
+        "lastSrvcDt": "07/02/2025",
+        "srvcCode": "99214",
+        "revenueCode": "",
+        "paidAmt": "200.63",
+        "allowdAmt": "220.63",
+        "provWrtOffAmt": "234.37",
+        "notCovAmt": "0.00",
+        "totalMemResp": "20.00",
+        "copay": "20.00",
+        "deductible": "0.00",
+        "coinsurance": "0.00",
+        "claimCodes": [
+          {
+            "type": "REMARK",
+            "code": "T0",
+            "description": "THIS CLAIM WAS PROCESSED USING YOUR CONTRACTED RATE. THE MEMBER IS ONLY RESPONSIBLE FOR THE COST SHARE (DEDUCTIBLE, COPAY AND COINSURANCE) AND ANY NON-COVERED AMOUNT AFTER THEY MEET THEIR BENEFIT LIMIT FOR A COVERED SERVICE."
+          },
+          {
+            "type": "CARC",
+            "code": "3",
+            "description": "CO-PAYMENT AMOUNT"
+          },
+          {
+            "type": "CARC",
+            "code": "45",
+            "description": "CHARGE EXCEEDS FEE SCHEDULE/MAXIMUM ALLOWABLE OR CONTRACTED/LEGISLATED FEE ARRANGEMENT."
+          }
+        ],
+        "billedAmt": "455.00",
+        "networkStatus": "I",
+        "medicarePaidAmt": "0.00",
+        "unitCount": "1",
+        "processedTime": "20.06.13",
+        "linePmtServiceCode": "99214",
+        "procedureCd": "99214",
+        "procedureTypeCd": "HC",
+        "transactionCd": "00",
+        "causeCd": "0",
+        "ovrCd": "",
+        "providerAdjustDiscountAmount": "234.37",
+        "planCoveragePercent": "0.00",
+        "capFundType": "",
+        "icnSuffix": "01",
+        "icnVersionNumber": "1",
+        "lineLevelPlaceOfService": "11",
+        "qpaAmt": "0.00",
+        "pgoPct": "0.00",
+        "lineKey": "lrpyyu9q7hhm801760487777158",
+        "provNotCovAmt": "0.00",
+        "ptntNoCovAmt": "0.00"
+      }
+    ],
+    "payments": [
+      {
+        "paymentIssueDt": "07/31/2025",
+        "checkNbr": "31064834",
+        "checkAmt": "1133.85",
+        "checkEFTIndicator": "E",
+        "chkSrsDesg": "W3",
+        "checkStatus": null,
+        "draftAmt": "200.63",
+        "draftNbr": "0110071340",
+        "cashedDt": null,
+        "payeeTypeCode": "Provider",
+        "payeeNm": "RSM MEDICAL",
+        "paymentType": "ACH",
+        "payeeAddress": {
+          "addressLine1": "5899 PRESTON RD STE 1104",
+          "city": "FRISCO",
+          "state": "TX",
+          "zip": "824091418"
+        }
+      }
+    ],
+    "hasDetailedData": true,
+    "hasPaymentData": true,
+    "memberInfo": {
+      "subscriberId": "916676926",
+      "policyNbr": "717740",
+      "ptntFn": "ZOEY",
+      "ptntLn": "WILCOX",
+      "ptntDob": "10/03/2004"
+    },
+    "claimSummary": {
+      "receivedDt": "07/24/2025",
+      "processedDt": "07/25/2025",
+      "processedTm": "20:06:13",
+      "firstSrvcDt": "07/02/2025",
+      "lastSrvcDt": "07/02/2025",
+      "ptntAcctNbr": "5253",
+      "networkStatus": "I",
+      "claimType": "P",
+      "statusEfctDt": "07/31/2025",
+      "totalChargedAmt": "455.00",
+      "provWriteOffAmt": "234.37",
+      "ptntNoCovAmt": "0.00",
+      "provNotCovAmt": "0.00",
+      "totalAllowdAmt": "220.63",
+      "deductibleAmt": "0.00",
+      "totalCopayAmt": "20.00",
+      "totalCoinsAmt": "0.00",
+      "totalPaidAmt": "200.63",
+      "faclOrProfCd": "P",
+      "totalPtntRespAmt": "20.00",
+      "dccFln": "9282520525899",
+      "clmXWalkData": [
+        {
+          "clm507Cd": "F1",
+          "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+          "clm508Cd": "65",
+          "clm508CdDesc": "Claim/line has been paid.",
+          "clmIcnSufxCd": "01",
+          "clmDrftNbr": "0110071340"
+        }
+      ],
+      "chkInfo": [],
+      "claimCodes": []
+    },
+    "rawJson": {
+      "claimNumber": "FE98163821",
+      "claimStatus": "Finalized",
+      "detailsAvailable": "T",
+      "memberInfo": {
+        "subscriberId": "916676926",
+        "policyNbr": "717740",
+        "ptntFn": "ZOEY",
+        "ptntLn": "WILCOX",
+        "ptntDob": "10/03/2004"
+      },
+      "provInfo": {
+        "submitted": {
+          "tin": "854203105",
+          "billProvNm": "RSM MEDICAL PLLC",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR"
+        },
+        "adjudicated": {
+          "tin": "854203105",
+          "billProvNm": "SARKAR MD/RAKHI",
+          "billingNpi": "1790486876",
+          "servicingProvNm": "RAKHI SARKAR",
+          "tinPrfx": "2",
+          "tinSufx": "00002"
+        }
+      },
+      "claimSummary": {
+        "receivedDt": "07/24/2025",
+        "processedDt": "07/25/2025",
+        "processedTm": "20:06:13",
+        "firstSrvcDt": "07/02/2025",
+        "lastSrvcDt": "07/02/2025",
+        "ptntAcctNbr": "5253",
+        "networkStatus": "I",
+        "claimType": "P",
+        "statusEfctDt": "07/31/2025",
+        "totalChargedAmt": "455.00",
+        "provWriteOffAmt": "234.37",
+        "ptntNoCovAmt": "0.00",
+        "provNotCovAmt": "0.00",
+        "totalAllowdAmt": "220.63",
+        "deductibleAmt": "0.00",
+        "totalCopayAmt": "20.00",
+        "totalCoinsAmt": "0.00",
+        "totalPaidAmt": "200.63",
+        "faclOrProfCd": "P",
+        "totalPtntRespAmt": "20.00",
+        "dccFln": "9282520525899",
+        "clmXWalkData": [
+          {
+            "clm507Cd": "F1",
+            "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+            "clm508Cd": "65",
+            "clm508CdDesc": "Claim/line has been paid.",
+            "clmIcnSufxCd": "01",
+            "clmDrftNbr": "0110071340"
+          }
+        ],
+        "chkInfo": [],
+        "claimCodes": []
+      }
+    },
+    "detailsJson": {
+      "transactionId": "8e8b8158-6f91-4e75-915a-7ebf311ea253-1760487776837",
+      "invokeActions": "Y",
+      "claimsDetailInfo": [
+        {
+          "claimNumber": "FE98163821",
+          "payerId": "87726",
+          "cobInfo": {
+            "otherInsuredNm": "",
+            "cobCalculatedType": "",
+            "payerType": "",
+            "cobDesc": "",
+            "cobPolicyDesc": "",
+            "paymentType": "",
+            "adjudicatedCOBIndicator": "P"
+          },
+          "diagnosisCodes": [
+            {
+              "diagnosisCode": "E669"
+            },
+            {
+              "diagnosisCode": "K219"
+            },
+            {
+              "diagnosisCode": "R519"
+            }
+          ],
+          "claimReprocessedIndicator": "N",
+          "paymentToEnrollee": "N",
+          "capitationIndicator": false,
+          "electronicPayerID": "87726",
+          "initialDecisionDate": "07/25/2025",
+          "dateReceived": "07/24/2025",
+          "diagnosisCodeType": "0",
+          "diagnosticSequenceNumber": "1",
+          "providerTinPrefix": "2",
+          "providerTin": "854203105",
+          "providerTinSuffix": "00002",
+          "billingProviderName": "SARKAR MD/RAKHI",
+          "renderingProviderName": "",
+          "patientName": "ZOEY WILCOX",
+          "claimOIPaidAmount": "0.00",
+          "patientAccountNumber": "5253",
+          "patientGroupNumber": "717740",
+          "patientSubscriberNumber": "916676926",
+          "patientRelationship": "CH",
+          "cobMedCalcType": "612",
+          "typeOfClaim": "COM",
+          "lines": [
+            {
+              "lineNbr": "1",
+              "processedDt": "07/25/2025",
+              "firstSrvcDt": "07/02/2025",
+              "lastSrvcDt": "07/02/2025",
+              "srvcCode": "99214",
+              "revenueCode": "",
+              "paidAmt": "200.63",
+              "allowdAmt": "220.63",
+              "provWrtOffAmt": "234.37",
+              "notCovAmt": "0.00",
+              "totalMemResp": "20.00",
+              "copay": "20.00",
+              "deductible": "0.00",
+              "coinsurance": "0.00",
+              "claimCodes": [
+                {
+                  "type": "REMARK",
+                  "code": "T0",
+                  "description": "THIS CLAIM WAS PROCESSED USING YOUR CONTRACTED RATE. THE MEMBER IS ONLY RESPONSIBLE FOR THE COST SHARE (DEDUCTIBLE, COPAY AND COINSURANCE) AND ANY NON-COVERED AMOUNT AFTER THEY MEET THEIR BENEFIT LIMIT FOR A COVERED SERVICE."
+                },
+                {
+                  "type": "CARC",
+                  "code": "3",
+                  "description": "CO-PAYMENT AMOUNT"
+                },
+                {
+                  "type": "CARC",
+                  "code": "45",
+                  "description": "CHARGE EXCEEDS FEE SCHEDULE/MAXIMUM ALLOWABLE OR CONTRACTED/LEGISLATED FEE ARRANGEMENT."
+                }
+              ],
+              "billedAmt": "455.00",
+              "networkStatus": "I",
+              "medicarePaidAmt": "0.00",
+              "unitCount": "1",
+              "processedTime": "20.06.13",
+              "linePmtServiceCode": "99214",
+              "procedureCd": "99214",
+              "procedureTypeCd": "HC",
+              "transactionCd": "00",
+              "causeCd": "0",
+              "ovrCd": "",
+              "providerAdjustDiscountAmount": "234.37",
+              "planCoveragePercent": "0.00",
+              "capFundType": "",
+              "icnSuffix": "01",
+              "icnVersionNumber": "1",
+              "lineLevelPlaceOfService": "11",
+              "qpaAmt": "0.00",
+              "pgoPct": "0.00",
+              "lineKey": "lrpyyu9q7hhm801760487777158",
+              "provNotCovAmt": "0.00",
+              "ptntNoCovAmt": "0.00"
+            }
+          ]
+        }
+      ],
+      "claimSummaryInfo": [
+        {
+          "claimNumber": "FE98163821",
+          "claimStatus": "Finalized",
+          "detailsAvailable": "T",
+          "memberInfo": {
+            "subscriberId": "0457638359",
+            "policyNbr": "717740",
+            "ptntFn": "ZOEY",
+            "ptntLn": "WILCOX",
+            "ptntDob": "10/03/2004"
+          },
+          "provInfo": {
+            "submitted": {
+              "tin": "854203105",
+              "billProvNm": "RSM MEDICAL PLLC",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            },
+            "adjudicated": {
+              "tin": "854203105",
+              "billProvNm": "SARKAR MD/RAKHI",
+              "billingNpi": "1790486876",
+              "servicingProvNm": "RAKHI SARKAR"
+            }
+          },
+          "claimSummary": {
+            "receivedDt": "07/24/2025",
+            "processedDt": "07/25/2025",
+            "processedTm": "20:06:13",
+            "firstSrvcDt": "07/02/2025",
+            "lastSrvcDt": "07/02/2025",
+            "ptntAcctNbr": "5253",
+            "networkStatus": "I",
+            "claimType": "P",
+            "statusEfctDt": "07/31/2025",
+            "totalChargedAmt": "455.00",
+            "provWriteOffAmt": "234.37",
+            "ptntNoCovAmt": "0.00",
+            "provNotCovAmt": "0.00",
+            "totalAllowdAmt": "220.63",
+            "deductibleAmt": "0.00",
+            "totalCopayAmt": "20.00",
+            "totalCoinsAmt": "0.00",
+            "totalPaidAmt": "200.63",
+            "totalPtntRespAmt": "20.00",
+            "clmXWalkData": [
+              {
+                "clm507Cd": "F1",
+                "clm507CdDesc": "Finalized/Payment-The claim/line has been paid.",
+                "clm508Cd": "65",
+                "clm508CdDesc": "Claim/line has been paid."
+              }
+            ],
+            "chkInfo": [
+              {
+                "chkSrsDesg": "W3",
+                "chkEftInd": "E",
+                "chkNbr": "31064834",
+                "chkAmt": "1133.85",
+                "paymentIssueDt": "07/31/2025",
+                "draftAmt": "200.63",
+                "draftNbr": "0110071340",
+                "payeeTypeCode": "P",
+                "payeeNm": "RSM MEDICAL",
+                "payeeAddress": {
+                  "addressLine1": "5899 PRESTON RD STE 1104",
+                  "city": "FRISCO",
+                  "state": "TX",
+                  "zip": "824091418"
+                }
+              }
+            ],
+            "claimCodes": []
+          }
+        }
+      ]
+    },
+    "paymentJson": {
+      "payments": [
+        {
+          "paymentIssueDt": "07/31/2025",
+          "checkNbr": "31064834",
+          "checkAmt": "1133.85",
+          "checkEFTIndicator": "E",
+          "chkSrsDesg": "W3",
+          "checkStatus": null,
+          "draftAmt": "200.63",
+          "draftNbr": "0110071340",
+          "cashedDt": null,
+          "payeeTypeCode": "Provider",
+          "payeeNm": "RSM MEDICAL",
+          "paymentType": "ACH",
+          "payeeAddress": {
+            "addressLine1": "5899 PRESTON RD STE 1104",
+            "city": "FRISCO",
+            "state": "TX",
+            "zip": "824091418"
+          }
+        }
+      ]
+    }
+  }
+]

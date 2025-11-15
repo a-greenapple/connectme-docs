@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectMe Documentation Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .search-box {
+            padding: 30px 40px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            border-color: #764ba2;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 0;
+            min-height: 600px;
+        }
+        
+        .sidebar {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: calc(100vh - 300px);
+        }
+        
+        .sidebar h3 {
+            color: #667eea;
+            margin: 20px 0 10px 0;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            margin: 5px 0;
+        }
+        
+        .sidebar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+        
+        .sidebar a:hover {
+            background: #34495e;
+            color: #667eea;
+            transform: translateX(5px);
+        }
+        
+        .main-content {
+            padding: 40px;
+            overflow-y: auto;
+            max-height: calc(100vh - 300px);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            margin: 20px 0 15px 0;
+            font-size: 1.3em;
+        }
+        
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .doc-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .doc-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .doc-card h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .doc-card p {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .doc-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .badge-new {
+            background: #667eea;
+            color: white;
+        }
+        
+        .badge-important {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .badge-guide {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .badge-fix {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .quick-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .quick-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .quick-link-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .quick-link-title {
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                max-height: 300px;
+            }
+            
+            .doc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 ConnectMe Documentation Hub</h1>
+            <p>Your central resource for all ConnectMe documentation</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">Last Updated: November 15, 2025 | Version: Pre-Production</p>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Search documentation... (try 'quick', 'fix', 'setup', 'api')">
+        </div>
+        
+        <div class="content">
+            <div class="sidebar">
+                <h3>📑 Quick Navigation</h3>
+                <ul>
+                    <li><a href="#quick-start">Quick Start</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#technical">Technical</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="#testing">Testing</a></li>
+                    <li><a href="#deployment">Deployment</a></li>
+                    <li><a href="#by-role">By Role</a></li>
+                </ul>
+                
+                <h3>🔥 Recent Updates</h3>
+                <ul>
+                    <li><a href="./testcases/datequery-claimstatus-filterbased/TEST_PAGINATION_FIX.md">Pagination Fix</a></li>
+                    <li><a href="./docs/deployment/TODO_BEFORE_PROD.md">TODO Before Prod</a></li>
+                    <li><a href="./docs/features/CLAIMS_DISPLAY_UPDATES.md">Claims Updates</a></li>
+                </ul>
+                
+                <h3>⚠️ Important</h3>
+                <ul>
+                    <li><a href="./docs/deployment/TODO_BEFORE_PROD.md" style="color: #e74c3c;">Production Checklist</a></li>
+                    <li><a href="./help/troubleshooting/">Troubleshooting</a></li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+                <div class="quick-links">
+                    <a href="./5_docs/1_Guide/QUICK_REFERENCE.md" class="quick-link">
+                        <div class="quick-link-icon">🚀</div>
+                        <div class="quick-link-title">Quick Start</div>
+                    </a>
+                    <a href="./help/admin/index.md" class="quick-link">
+                        <div class="quick-link-icon">⚙️</div>
+                        <div class="quick-link-title">Admin Guide</div>
+                    </a>
+                    <a href="./5_docs/testing/TESTING_GUIDE.md" class="quick-link">
+                        <div class="quick-link-icon">🧪</div>
+                        <div class="quick-link-title">Testing</div>
+                    </a>
+                    <a href="./docs/deployment/TODO_BEFORE_PROD.md" class="quick-link" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+                        <div class="quick-link-icon">⚠️</div>
+                        <div class="quick-link-title">Before Prod</div>
+                    </a>
+                </div>
+                
+                <div id="quick-start" class="section">
+                    <h2>🚀 Quick Start Guides</h2>
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <span class="badge badge-guide">Guide</span>
+                            <h4><a href="./5_docs/1_Guide/QUICK_REFERENCE.md">Quick Reference</a></h4>
+                            <p>Start here if you're new to ConnectMe</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-guide">Guide</span>
+                            <h4><a href="./5_docs/1_Guide/COMPLETE_SETUP_AND_TEST_GUIDE.md">Complete Setup</a></h4>
+                            <p>Full system setup and configuration</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-guide">Guide</span>
+                            <h4><a href="./docs/guides/FRONTEND_QUICK_START.md">Frontend Quick Start</a></h4>
+                            <p>Get the UI running quickly</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-guide">Guide</span>
+                            <h4><a href="./docs/guides/LOCAL-SETUP.md">Local Setup</a></h4>
+                            <p>Development environment setup</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="features" class="section">
+                    <h2>📋 Feature Documentation</h2>
+                    
+                    <h3>Claims Management</h3>
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <h4><a href="./docs/features/CLAIMS_UI_GUIDE.md">Claims UI Guide</a></h4>
+                            <p>Using the claims interface</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-new">New</span>
+                            <h4><a href="./docs/features/CLAIMS_FILTERING_IMPLEMENTATION.md">Claims Filtering</a></h4>
+                            <p>Filter claims by status</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./5_docs/1_1_CLAIMS/HOW_CLAIMS_ARE_QUERIED.md">How Claims Work</a></h4>
+                            <p>Technical details of claim queries</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./docs/features/LINE_LEVEL_CLAIM_CODES.md">Line-Level Codes</a></h4>
+                            <p>Detailed claim code information</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Bulk Upload System</h3>
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <span class="badge badge-guide">Guide</span>
+                            <h4><a href="./5_docs/1_2_BULK/QUICK_START_BULK_UPLOAD.md">Quick Start</a></h4>
+                            <p>Get started with bulk uploads</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./5_docs/1_2_BULK/CSV_BULK_UPLOAD_USER_GUIDE.md">User Guide</a></h4>
+                            <p>Complete bulk upload guide</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./BULK_UPLOAD_TEMPLATE_ADDED.md">Template</a></h4>
+                            <p>Download CSV template</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./BULK_UPLOAD_HISTORY_FEATURES.md">History</a></h4>
+                            <p>View past bulk uploads</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="troubleshooting" class="section">
+                    <h2>🐛 Troubleshooting & Fixes</h2>
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <span class="badge badge-fix">Fix</span>
+                            <span class="badge badge-new">New</span>
+                            <h4><a href="./testcases/datequery-claimstatus-filterbased/TEST_PAGINATION_FIX.md">Pagination Fix</a></h4>
+                            <p>UHC API pagination support (Nov 15)</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-fix">Fix</span>
+                            <h4><a href="./help/troubleshooting/FIX_CLAIM_SEARCH_TIMEOUT.md">Timeout Fix</a></h4>
+                            <p>Resolve claim search timeouts</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-fix">Fix</span>
+                            <h4><a href="./help/troubleshooting/FIX_CORS_KEYCLOAK.md">CORS Fix</a></h4>
+                            <p>Fix Keycloak CORS issues</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-fix">Fix</span>
+                            <h4><a href="./help/troubleshooting/BULK_UPLOAD_FIX.md">Bulk Upload Fix</a></h4>
+                            <p>Resolve bulk upload issues</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-fix">Fix</span>
+                            <h4><a href="./ADMIN_LOGIN_FIX.md">Admin Login Fix</a></h4>
+                            <p>Fix admin login problems</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-fix">Fix</span>
+                            <h4><a href="./CLAIMS_SEARCH_403_FIX.md">403 Error Fix</a></h4>
+                            <p>Resolve permission errors</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="testing" class="section">
+                    <h2>🧪 Testing</h2>
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <h4><a href="./TESTING_INDEX.md">Testing Index</a></h4>
+                            <p>Master testing documentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./5_docs/testing/TESTING_GUIDE.md">Testing Guide</a></h4>
+                            <p>How to test the system</p>
+                        </div>
+                        <div class="doc-card">
+                            <span class="badge badge-new">New</span>
+                            <h4><a href="./testcases/datequery-claimstatus-filterbased/README.md">Status Filter Tests</a></h4>
+                            <p>Test status filtering feature</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./testing/TEST_RESULTS_SUMMARY.md">Test Results</a></h4>
+                            <p>Latest test execution results</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="deployment" class="section">
+                    <h2>🚀 Deployment</h2>
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <span class="badge badge-important">Important</span>
+                            <h4><a href="./TODO_BEFORE_PROD.md">TODO Before Prod</a></h4>
+                            <p>⚠️ MUST READ before production</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./docs/PREPROD_SETUP_GUIDE.md">Pre-Prod Setup</a></h4>
+                            <p>Pre-production configuration</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./5_docs/TBR/5_DEPLOYMENT_CHECKLIST.md">Deployment Checklist</a></h4>
+                            <p>Pre-deployment verification</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./scripts/deployment/10_DEPLOYMENT_SCRIPTS_README.md">Deployment Scripts</a></h4>
+                            <p>Automated deployment tools</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="by-role" class="section">
+                    <h2>🎯 Documentation by Role</h2>
+                    
+                    <h3>For Administrators</h3>
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <h4><a href="./help/admin/index.md">Admin Index</a></h4>
+                            <p>Central admin documentation</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./docs/USER_MANAGEMENT_SETUP.md">User Management</a></h4>
+                            <p>Configure users and roles</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./5_docs/monitoring/COMPLETE_MONITORING_SYSTEM.md">Monitoring</a></h4>
+                            <p>System monitoring and logs</p>
+                        </div>
+                    </div>
+                    
+                    <h3>For Developers</h3>
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <h4><a href="./LOCAL-SETUP.md">Local Setup</a></h4>
+                            <p>Development environment</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./connectme-backend/PROVIDER_ARCHITECTURE.md">Architecture</a></h4>
+                            <p>System architecture overview</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4><a href="./GIT_BRANCHING_STRATEGY.md">Git Strategy</a></h4>
+                            <p>Version control workflow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>ConnectMe Documentation Hub</strong></p>
+            <p>Last Updated: November 15, 2025 | Version: Pre-Production</p>
+            <p>📌 Bookmark this page for easy access to all documentation</p>
+        </div>
+    </div>
+    
+    <script>
+        // Simple search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.doc-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // If search is empty, show all
+            if (searchTerm === '') {
+                cards.forEach(card => card.style.display = 'block');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

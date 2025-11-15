@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Guide - ConnectMe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .breadcrumb {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+        }
+        
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .main-content h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .main-content h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        
+        .main-content h3 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .intro {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+        
+        .card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .card a:hover {
+            text-decoration: underline;
+        }
+        
+        .card a::after {
+            content: " →";
+            margin-left: 5px;
+        }
+        
+        .alert {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .alert-info {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            color: #1565c0;
+        }
+        
+        .alert-warning {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            color: #e65100;
+        }
+        
+        .alert-success {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            color: #2e7d32;
+        }
+        
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        table th {
+            background: #f8f9fa;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        table tr:hover {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h2>⚙️ Admin Guide</h2>
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> / Admin Guide
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h3>📚 Admin Topics</h3>
+            <ul>
+                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="setup.html">Initial Setup</a></li>
+                <li><a href="user-management.html">User Management</a></li>
+                <li><a href="permissions.html">Roles & Permissions</a></li>
+                <li><a href="keycloak-config.html">Keycloak Configuration</a></li>
+                <li><a href="deployment.html">Deployment Guide</a></li>
+                <li><a href="backup-restore.html">Backup & Restore</a></li>
+                <li><a href="monitoring.html">Monitoring & Logs</a></li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;">🔗 Quick Links</h3>
+            <ul>
+                <li><a href="../troubleshooting/index.html">Troubleshooting</a></li>
+                <li><a href="../developer/index.html">Developer Guide</a></li>
+                <li><a href="../user/index.html">User Guide</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Administrator Guide</h1>
+            
+            <div class="intro">
+                <p><strong>Welcome to the ConnectMe Administrator Guide!</strong></p>
+                <p>This guide covers everything you need to know about setting up, configuring, and managing the ConnectMe healthcare claims management system.</p>
+            </div>
+            
+            <div class="alert alert-info">
+                <strong>📌 Prerequisites:</strong> You should have admin or manager role access to use these features. If you don't have access, contact your system administrator.
+            </div>
+            
+            <h2>📖 What's in This Guide</h2>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="icon">🚀</div>
+                    <h3>Initial Setup</h3>
+                    <p>Get started with system installation, configuration, and first-time setup.</p>
+                    <a href="setup.html">Read Setup Guide</a>
+                </div>
+                
+                <div class="card">
+                    <div class="icon">👥</div>
+                    <h3>User Management</h3>
+                    <p>Create, edit, and manage user accounts across your organization.</p>
+                    <a href="user-management.html">Manage Users</a>
+                </div>
+                
+                <div class="card">
+                    <div class="icon">🔐</div>
+                    <h3>Roles & Permissions</h3>
+                    <p>Configure user roles and control access to features and data.</p>
+                    <a href="permissions.html">Configure Permissions</a>
+                </div>
+                
+                <div class="card">
+                    <div class="icon">🔑</div>
+                    <h3>Keycloak Configuration</h3>
+                    <p>Set up authentication, SSO, and identity management.</p>
+                    <a href="keycloak-config.html">Configure Keycloak</a>
+                </div>
+                
+                <div class="card">
+                    <div class="icon">🚢</div>
+                    <h3>Deployment</h3>
+                    <p>Deploy to staging, pre-production, and production environments.</p>
+                    <a href="deployment.html">Deploy System</a>
+                </div>
+                
+                <div class="card">
+                    <div class="icon">💾</div>
+                    <h3>Backup & Restore</h3>
+                    <p>Protect your data with regular backups and disaster recovery.</p>
+                    <a href="backup-restore.html">Backup Guide</a>
+                </div>
+                
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>Monitoring & Logs</h3>
+                    <p>Monitor system health, view logs, and troubleshoot issues.</p>
+                    <a href="monitoring.html">View Monitoring</a>
+                </div>
+                
+                <div class="card">
+                    <div class="icon">🔧</div>
+                    <h3>Troubleshooting</h3>
+                    <p>Common issues and solutions for administrators.</p>
+                    <a href="../troubleshooting/index.html">Get Help</a>
+                </div>
+            </div>
+            
+            <h2>🎯 Common Admin Tasks</h2>
+            
+            <h3>Daily Tasks</h3>
+            <ul>
+                <li>Monitor system health and performance</li>
+                <li>Review user activity logs</li>
+                <li>Respond to user access requests</li>
+                <li>Check for failed jobs or errors</li>
+            </ul>
+            
+            <h3>Weekly Tasks</h3>
+            <ul>
+                <li>Review and approve new user accounts</li>
+                <li>Update user roles and permissions</li>
+                <li>Check backup status</li>
+                <li>Review system metrics and usage</li>
+            </ul>
+            
+            <h3>Monthly Tasks</h3>
+            <ul>
+                <li>Perform security audits</li>
+                <li>Review and update access policies</li>
+                <li>Clean up inactive user accounts</li>
+                <li>Update system documentation</li>
+            </ul>
+            
+            <h2>🔐 Security Best Practices</h2>
+            
+            <div class="alert alert-warning">
+                <strong>⚠️ Important Security Guidelines:</strong>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>Never share admin credentials</li>
+                    <li>Use strong passwords (minimum 12 characters)</li>
+                    <li>Enable two-factor authentication when available</li>
+                    <li>Regularly review user access and permissions</li>
+                    <li>Keep all systems and dependencies updated</li>
+                    <li>Monitor logs for suspicious activity</li>
+                </ul>
+            </div>
+            
+            <h2>📊 System Overview</h2>
+            
+            <h3>Architecture Components</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Technology</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Frontend</strong></td>
+                        <td>Next.js, React, TypeScript</td>
+                        <td>User interface and client-side logic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backend</strong></td>
+                        <td>Django, Python, REST API</td>
+                        <td>Business logic and data processing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Authentication</strong></td>
+                        <td>Keycloak</td>
+                        <td>Identity and access management</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database</strong></td>
+                        <td>PostgreSQL</td>
+                        <td>Data storage and persistence</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cache</strong></td>
+                        <td>Redis</td>
+                        <td>Session management and caching</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Task Queue</strong></td>
+                        <td>Celery</td>
+                        <td>Async job processing (bulk uploads)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Web Server</strong></td>
+                        <td>Nginx</td>
+                        <td>Reverse proxy and static files</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Available Roles</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Access Level</th>
+                        <th>Key Permissions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Admin</strong></td>
+                        <td>Full Access</td>
+                        <td>All features, user management, system configuration</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager</strong></td>
+                        <td>Organization-wide</td>
+                        <td>User management, reports, workflow approval</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Staff</strong></td>
+                        <td>Standard</td>
+                        <td>Claims search, bulk upload, workflow</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Billing</strong></td>
+                        <td>Financial</td>
+                        <td>Claims data, reports, export</td>
+                    </tr>
+                    <tr>
+                        <td><strong>API User</strong></td>
+                        <td>Programmatic</td>
+                        <td>API access only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Read Only</strong></td>
+                        <td>View Only</td>
+                        <td>View claims and reports (no modifications)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>🆘 Getting Help</h2>
+            
+            <div class="alert alert-success">
+                <strong>Need assistance?</strong>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li><strong>Documentation:</strong> Check the <a href="../troubleshooting/index.html" style="color: #2e7d32;">Troubleshooting Guide</a></li>
+                    <li><strong>Email Support:</strong> <a href="mailto:support@totessoft.com" style="color: #2e7d32;">support@totessoft.com</a></li>
+                    <li><strong>Developer Guide:</strong> <a href="../developer/index.html" style="color: #2e7d32;">Technical Documentation</a></li>
+                </ul>
+            </div>
+            
+            <h2>📝 Next Steps</h2>
+            
+            <ol>
+                <li><strong>New to ConnectMe?</strong> Start with the <a href="setup.html">Initial Setup Guide</a></li>
+                <li><strong>Need to add users?</strong> See <a href="user-management.html">User Management</a></li>
+                <li><strong>Configure permissions?</strong> Check <a href="permissions.html">Roles & Permissions</a></li>
+                <li><strong>Having issues?</strong> Visit the <a href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
+            </ol>
+        </main>
+    </div>
+</body>
+</html>
+

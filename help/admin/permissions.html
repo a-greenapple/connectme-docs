@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roles & Permissions - ConnectMe Admin Guide</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <style>
+        .permission-matrix {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+        
+        .permission-matrix table {
+            min-width: 800px;
+        }
+        
+        .permission-matrix td {
+            text-align: center;
+        }
+        
+        .permission-matrix .check {
+            color: #4caf50;
+            font-size: 1.5em;
+        }
+        
+        .permission-matrix .cross {
+            color: #f44336;
+            font-size: 1.5em;
+        }
+        
+        .step-by-step {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .step-by-step h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .step-by-step ol {
+            margin-left: 20px;
+        }
+        
+        .step-by-step ol li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h2>🔐 Roles & Permissions</h2>
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> / <a href="index.html">Admin</a> / Roles & Permissions
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h3>📚 Admin Topics</h3>
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="setup.html">Initial Setup</a></li>
+                <li><a href="user-management.html">User Management</a></li>
+                <li><a href="permissions.html" class="active">Roles & Permissions</a></li>
+                <li><a href="keycloak-config.html">Keycloak Configuration</a></li>
+                <li><a href="deployment.html">Deployment Guide</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>Roles & Permissions Guide</h1>
+            
+            <div class="intro">
+                <p><strong>Control access to ConnectMe features using role-based permissions.</strong></p>
+                <p>This guide explains how to configure user roles in both Keycloak and Django to control what users can see and do.</p>
+            </div>
+            
+            <h2>🎯 How to See User Management in Frontend</h2>
+            
+            <div class="alert alert-info">
+                <strong>Quick Answer:</strong> To see the User Management menu in the frontend, a user must have either <code>admin</code> or <code>manager</code> role assigned in Keycloak.
+            </div>
+            
+            <h3>Frontend Permission Requirements</h3>
+            
+            <p>The "⚙️ Admin" menu (which includes User Management) is only visible to users with specific roles:</p>
+            
+            <ul>
+                <li>✅ <strong>admin</strong> role - Full access to all admin features</li>
+                <li>✅ <strong>manager</strong> role - Access to user management within their organization</li>
+                <li>❌ <strong>staff, billing, api_user, read_only</strong> - Cannot see admin menu</li>
+            </ul>
+            
+            <h3>Backend API Permission Requirements</h3>
+            
+            <p>The User Management API endpoints require <code>IsManagerOrAdmin</code> permission:</p>
+            
+            <ul>
+                <li><strong>List Users:</strong> admin or manager</li>
+                <li><strong>Create User:</strong> admin or manager</li>
+                <li><strong>Update User:</strong> admin or manager</li>
+                <li><strong>Delete User:</strong> admin only</li>
+                <li><strong>Reset Password:</strong> admin or manager</li>
+            </ul>
+            
+            <h2>🔧 How to Set User Permissions</h2>
+            
+            <div class="step-by-step">
+                <h4>Option 1: Set Role in Keycloak (Recommended)</h4>
+                <ol>
+                    <li><strong>Login to Keycloak Admin Console</strong>
+                        <ul>
+                            <li>URL: <code>https://auth.totesoft.com</code></li>
+                            <li>Use your Keycloak admin credentials</li>
+                        </ul>
+                    </li>
+                    <li><strong>Navigate to the User</strong>
+                        <ul>
+                            <li>Select realm: <code>connectme-preprod</code></li>
+                            <li>Go to: <strong>Users</strong> → Find user → Click <strong>Edit</strong></li>
+                        </ul>
+                    </li>
+                    <li><strong>Assign Role via Groups (Preferred)</strong>
+                        <ul>
+                            <li>Go to <strong>Groups</strong> tab</li>
+                            <li>Click <strong>Join Group</strong></li>
+                            <li>Select <code>/admin</code> or <code>/manager</code> group</li>
+                            <li>Click <strong>Join</strong></li>
+                        </ul>
+                    </li>
+                    <li><strong>Alternative: Assign via Realm Roles</strong>
+                        <ul>
+                            <li>Go to <strong>Role Mappings</strong> tab</li>
+                            <li>Under <strong>Realm Roles</strong>, assign <code>admin</code> or <code>manager</code></li>
+                        </ul>
+                    </li>
+                    <li><strong>User Must Re-login</strong>
+                        <ul>
+                            <li>Changes take effect after logout/login</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="step-by-step">
+                <h4>Option 2: Set Role in Django (Temporary)</h4>
+                <ol>
+                    <li><strong>SSH to Server</strong>
+                        <pre><code>ssh connectme@169.59.163.43</code></pre>
+                    </li>
+                    <li><strong>Access Django Shell</strong>
+                        <pre><code>cd /var/www/connectme-preprod-backend
+source venv/bin/activate
+python manage.py shell</code></pre>
+                    </li>
+                    <li><strong>Update User Role</strong>
+                        <pre><code>from apps.users.models import User
+
+# Find user
+user = User.objects.get(username='your_username')
+
+# Set role
+user.role = 'admin'  # or 'manager'
+user.save()
+
+print(f"✅ User {user.username} role set to: {user.role}")</code></pre>
+                    </li>
+                </ol>
+                
+                <div class="alert alert-warning">
+                    <strong>⚠️ Important:</strong> Django-only changes will be overwritten by Keycloak on next login. Always set roles in Keycloak for permanent effect.
+                </div>
+            </div>
+            
+            <h2>📊 Available Roles</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Code</th>
+                        <th>Access Level</th>
+                        <th>Use Case</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Administrator</strong></td>
+                        <td><code>admin</code></td>
+                        <td>Full System Access</td>
+                        <td>System administrators, IT staff</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager</strong></td>
+                        <td><code>manager</code></td>
+                        <td>Organization-wide</td>
+                        <td>Department managers, supervisors</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Staff</strong></td>
+                        <td><code>staff</code></td>
+                        <td>Standard User</td>
+                        <td>Healthcare staff, claims processors</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Billing</strong></td>
+                        <td><code>billing</code></td>
+                        <td>Financial Data</td>
+                        <td>Billing department staff</td>
+                    </tr>
+                    <tr>
+                        <td><strong>API User</strong></td>
+                        <td><code>api_user</code></td>
+                        <td>Programmatic Only</td>
+                        <td>Automated systems, integrations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Read Only</strong></td>
+                        <td><code>read_only</code></td>
+                        <td>View Only</td>
+                        <td>Auditors, external reviewers</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>🔐 Permission Matrix</h2>
+            
+            <div class="permission-matrix">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Admin</th>
+                            <th>Manager</th>
+                            <th>Staff</th>
+                            <th>Billing</th>
+                            <th>API User</th>
+                            <th>Read Only</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>View Dashboard</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Search Claims</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bulk Upload</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>View History</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Workflow Management</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Approve Workflow</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>User Management</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Delete Users</strong></td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>System Settings</strong></td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>View Audit Logs</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Export Data</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td><strong>API Access</strong></td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2>🔍 How Roles Are Extracted</h2>
+            
+            <p>The system extracts roles from Keycloak tokens in this priority order:</p>
+            
+            <ol>
+                <li><strong>Keycloak Groups</strong> (e.g., <code>/admin</code>, <code>/manager</code>) - <span style="color: #4caf50;">Highest Priority</span></li>
+                <li><strong>Realm Access Roles</strong> (e.g., <code>admin</code>, <code>manager</code>) - <span style="color: #ff9800;">Fallback</span></li>
+                <li><strong>Default:</strong> <code>staff</code> if no valid role found</li>
+            </ol>
+            
+            <div class="alert alert-info">
+                <strong>💡 Best Practice:</strong> Use Keycloak Groups for role assignment. They are more specific and easier to manage than realm roles.
+            </div>
+            
+            <h2>✅ Verification Steps</h2>
+            
+            <h3>1. Check Frontend Role Display</h3>
+            <ol>
+                <li>Login to the frontend</li>
+                <li>Open browser console (F12)</li>
+                <li>Look for: <code>[Navbar] User role: &lt;your_role&gt;</code></li>
+            </ol>
+            
+            <h3>2. Verify Keycloak Token</h3>
+            <ol>
+                <li>Open browser console (F12)</li>
+                <li>Run: <code>localStorage.getItem('kc_access_token')</code></li>
+                <li>Copy the token</li>
+                <li>Go to <a href="https://jwt.io" target="_blank">jwt.io</a></li>
+                <li>Paste token and check <code>groups</code> or <code>realm_access.roles</code> fields</li>
+            </ol>
+            
+            <h3>3. Check Django Database</h3>
+            <pre><code>ssh connectme@169.59.163.43
+cd /var/www/connectme-preprod-backend
+source venv/bin/activate
+python manage.py shell
+
+from apps.users.models import User
+user = User.objects.get(username='your_username')
+print(f"Role: {user.role}")</code></pre>
+            
+            <h2>🐛 Troubleshooting</h2>
+            
+            <h3>User Can't See Admin Menu</h3>
+            <ul>
+                <li>✓ Verify role is set to <code>admin</code> or <code>manager</code> in Keycloak</li>
+                <li>✓ User must logout and login again for changes to take effect</li>
+                <li>✓ Clear browser cache and localStorage</li>
+                <li>✓ Check browser console for role value</li>
+            </ul>
+            
+            <h3>Role Changes Not Taking Effect</h3>
+            <ul>
+                <li>✓ Ensure role is set in Keycloak (not just Django)</li>
+                <li>✓ User must re-authenticate (logout/login)</li>
+                <li>✓ Check Keycloak token includes the role</li>
+                <li>✓ Verify frontend is reading role from token correctly</li>
+            </ul>
+            
+            <h3>Permission Denied Errors</h3>
+            <ul>
+                <li>✓ Check user's role in Django database</li>
+                <li>✓ Verify API endpoint permission requirements</li>
+                <li>✓ Check backend logs for permission errors</li>
+                <li>✓ Ensure user is in correct organization</li>
+            </ul>
+            
+            <h2>📚 Related Documentation</h2>
+            
+            <ul>
+                <li><a href="user-management.html">User Management Guide</a></li>
+                <li><a href="keycloak-config.html">Keycloak Configuration</a></li>
+                <li><a href="../troubleshooting/login-issues.html">Troubleshooting Login Issues</a></li>
+                <li><a href="../developer/authentication.html">Authentication Technical Details</a></li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
+

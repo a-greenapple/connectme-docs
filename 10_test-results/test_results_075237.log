@@ -1,0 +1,46 @@
+/Users/ssiva/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+================================================================================
+  🧪 CONNECTME AUTOMATED TEST SUITE
+================================================================================
+
+[94m[07:52:37] 🏥 TEST 1: Backend API Health Check[0m
+[92m[07:52:38] ✅ Backend API responding (200 OK)[0m
+
+[94m[07:52:38] 🔐 TEST 2: Authentication[0m
+[92m[07:52:38] ✅ Authentication successful[0m
+
+[94m[07:52:38] 📤 TEST 3: CSV File Upload[0m
+[92m[07:52:38] ✅ Upload successful! Job ID: ae0a0381-219b-4577-8a18-128071ed9c5e[0m
+
+[94m[07:52:38] ⏳ TEST 4: Job Processing (waiting up to 60 seconds)[0m
+[94m[07:52:38] ⏳ Status: PENDING, Progress: 0.0%[0m
+[94m[07:52:42] ⏳ Status: PROCESSING, Progress: 0.0%[0m
+[92m[07:52:45] ✅ Job completed! Total: 5, Success: 0, Failed: 5, Duration: 1.773296s[0m
+
+[94m[07:52:45] 🔍 TEST 5: Results Validation[0m
+[91m[07:52:45] ❌ All claims failed: 0/5 succeeded[0m
+
+[94m[07:52:45] 📋 TEST 6: Checking Celery Logs[0m
+[93m[07:52:45] ⚠️ Found 1 error(s) in logs[0m
+    [2025-10-15 11:50:00,003: ERROR/MainProcess] Received unregistered task of type 'health_check_monito
+
+
+================================================================================
+  📊 TEST SUMMARY
+================================================================================
+
+[93m⚠️ PARTIAL SUCCESS[0m
+
+Tests Passed: 5/6 (83%)
+
+📋 Job Details:
+   Total Claims: 5
+   Success: 0
+   Failed: 5
+   Duration: 1.773296s
+   Success Rate: 0.0%
+
+================================================================================
+
